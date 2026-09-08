@@ -10,6 +10,7 @@ Orchestrates the end-to-end data engineering pipeline:
 """
 
 import sys
+import importlib
 from pathlib import Path
 from datetime import datetime, timedelta
 
@@ -20,12 +21,19 @@ if str(PROJECT_ROOT) not in sys.path:
 
 # Attempt importing Airflow operators (fallback to standalone mock for local CLI test)
 try:
-    from airflow import DAG
-    from airflow.operators.python import PythonOperator
+    airflow = importlib.import_module("airflow")
+    DAG = airflow.DAG
+    PythonOperator = importlib.import_module(
+        "airflow.operators.python"
+    ).PythonOperator
     try:
-        from airflow.operators.empty import EmptyOperator
+        EmptyOperator = importlib.import_module(
+            "airflow.operators.empty"
+        ).EmptyOperator
     except ImportError:
-        from airflow.operators.dummy import DummyOperator as EmptyOperator
+        EmptyOperator = importlib.import_module(
+            "airflow.operators.dummy"
+        ).DummyOperator
     AIRFLOW_AVAILABLE = True
 except ImportError:
     AIRFLOW_AVAILABLE = False
