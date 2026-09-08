@@ -1,0 +1,3 @@
+student_id,school,sex,age,address,famsize,pstatus,medu,fedu,mjob,fjob,reason,guardian,parent_education
+STU-0001,GP,F,17,U,GT3,T,4,3,services,teacher,course,mother,Higher Education
+STU-0002,MS,M,18,R,LE3,A,1,2,other,other,home,father,5th to 9th grade
