@@ -136,8 +136,10 @@ https://archive.ics.uci.edu/dataset/320/student+performance
 - SQLite fallback for local development
 
 ### Orchestration
-- Apache Airflow
-- PythonOperator / Airflow task dependencies
+- Apache Airflow 3.3.1
+- PythonOperator / EmptyOperator
+- Airflow DAG task dependencies
+- Graphviz for DAG visualization
 
 ### Visualization
 - Streamlit
@@ -458,9 +460,15 @@ sql/analytics.sql
 
 ## 12. Apache Airflow
 
-The Airflow DAG orchestrates the complete pipeline.
+Apache Airflow 3.3.1 is used to orchestrate the complete Part 1 data pipeline.
 
-Task sequence:
+The DAG is defined in:
+
+```text
+dags/student_pipeline.py
+```
+
+### DAG Task Sequence
 
 ```text
 start_pipeline
@@ -478,13 +486,78 @@ build_analytics_mart
 pipeline_complete
 ```
 
-DAG file:
+### Airflow DAG Visualization
 
-```text
-dags/student_pipeline.py
+The following graph is generated directly from the Airflow DAG using the Airflow CLI and Graphviz.
+
+![Airflow DAG Workflow](docs/airflow_dag.png)
+
+### Airflow Setup
+
+For local development on Windows, use Ubuntu/WSL2 rather than native Windows Airflow.
+
+Create and activate the virtual environment:
+
+```bash
+python3 -m venv airflow-venv
+source airflow-venv/bin/activate
 ```
 
-The pipeline can also be executed directly without Airflow for local testing:
+Install Airflow:
+
+```bash
+pip install apache-airflow
+```
+
+Install Graphviz for DAG visualization:
+
+```bash
+sudo apt update
+sudo apt install graphviz
+pip install graphviz
+```
+
+Configure Airflow to use the repository DAG folder:
+
+```bash
+export AIRFLOW__CORE__DAGS_FOLDER=/home/anurag/project/mlops_assignment/dags
+```
+
+Verify that the DAG is registered:
+
+```bash
+airflow dags list | grep student_data_pipeline
+```
+
+Generate the DAG visualization:
+
+```bash
+airflow dags show student_data_pipeline --save docs/airflow_dag.png
+```
+
+### Start Airflow
+
+For a simple local setup:
+
+```bash
+airflow standalone
+```
+
+The Airflow UI can then be opened at:
+
+```text
+http://localhost:8080
+```
+
+To trigger the DAG from the CLI:
+
+```bash
+airflow dags trigger student_data_pipeline
+```
+
+### Local Pipeline Testing
+
+The pipeline functions can also be tested directly without the Airflow scheduler when required by the coursework. The Airflow DAG itself should be validated through Airflow.
 
 ```bash
 python dags/student_pipeline.py
@@ -603,6 +676,17 @@ cd mlops_assignment
 pip install -r requirements.txt
 ```
 
+For Airflow 3.3.1 local development, create a separate Airflow virtual environment if Airflow is not included in the project's requirements:
+
+```bash
+python3 -m venv airflow-venv
+source airflow-venv/bin/activate
+pip install apache-airflow
+sudo apt update
+sudo apt install graphviz
+pip install graphviz
+```
+
 ### 3. Configure environment
 
 Copy:
@@ -649,6 +733,32 @@ python src/ingestion/ingest.py
 python src/validation/validate.py
 python src/transformation/transform.py
 python src/database/load.py
+```
+
+### Airflow
+
+Set the repository DAG directory before using Airflow:
+
+```bash
+export AIRFLOW__CORE__DAGS_FOLDER=/home/anurag/project/mlops_assignment/dags
+```
+
+List the DAG:
+
+```bash
+airflow dags list | grep student_data_pipeline
+```
+
+Start the local Airflow environment:
+
+```bash
+airflow standalone
+```
+
+Trigger the pipeline:
+
+```bash
+airflow dags trigger student_data_pipeline
 ```
 
 ### Dashboard
@@ -711,6 +821,7 @@ This demonstrates the complete Part 1 pipeline from **data ingestion to dashboar
 - [x] PostgreSQL schema
 - [x] Analytical data mart
 - [x] Apache Airflow DAG
+- [x] Airflow DAG visualization evidence (`docs/airflow_dag.png`)
 - [x] Streamlit dashboard with 5 views
 - [x] Architecture diagram
 - [x] Data dictionary
@@ -721,7 +832,25 @@ This demonstrates the complete Part 1 pipeline from **data ingestion to dashboar
 
 ---
 
-## 19. Part 2 — Future Extension
+## 19. Execution Evidence
+
+The repository includes an Airflow-generated DAG visualization at:
+
+```text
+docs/airflow_dag.png
+```
+
+This image is generated from the registered `student_data_pipeline` DAG using:
+
+```bash
+airflow dags show student_data_pipeline --save docs/airflow_dag.png
+```
+
+Additional execution evidence can include Airflow UI screenshots, task logs, PostgreSQL table output, validation/rejection records, and the Streamlit dashboard.
+
+---
+
+## 20. Part 2 — Future Extension
 
 Part 2 will extend this Part 1 pipeline into an MLOps workflow.
 
@@ -744,7 +873,7 @@ Possible future components include:
 
 ---
 
-## License / Academic Use
+## 21. License / Academic Use
 
 This repository is an individual academic project for the Data Engineering and MLOps coursework. Public datasets are used according to their respective terms.
 
