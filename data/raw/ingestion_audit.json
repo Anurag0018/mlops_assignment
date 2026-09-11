@@ -1,9 +1,9 @@
 [
   {
     "source_file": "student-mat.csv",
-    "source_path": "D:\\anura\\Documents\\mlops_project\\data\\raw\\student-mat.csv",
+    "source_path": "/home/anurag/project/mlops_assignment/data/raw/student-mat.csv",
     "source_name": "UCI Student Performance - Mathematics",
-    "extraction_date": "2026-09-08T11:21:06.457320+00:00",
+    "extraction_date": "2026-09-11T16:31:15.202530+00:00",
     "row_count": 395,
     "column_count": 33,
     "columns": [
@@ -46,9 +46,9 @@
   },
   {
     "source_file": "student-por.csv",
-    "source_path": "D:\\anura\\Documents\\mlops_project\\data\\raw\\student-por.csv",
+    "source_path": "/home/anurag/project/mlops_assignment/data/raw/student-por.csv",
     "source_name": "UCI Student Performance - Portuguese",
-    "extraction_date": "2026-09-08T11:21:06.474709+00:00",
+    "extraction_date": "2026-09-11T16:31:15.208633+00:00",
     "row_count": 649,
     "column_count": 33,
     "columns": [

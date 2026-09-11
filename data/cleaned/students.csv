@@ -1,3 +1,663 @@
 student_id,school,sex,age,address,famsize,pstatus,medu,fedu,mjob,fjob,reason,guardian,parent_education
-STU-0001,GP,F,17,U,GT3,T,4,3,services,teacher,course,mother,Higher Education
-STU-0002,MS,M,18,R,LE3,A,1,2,other,other,home,father,5th to 9th grade
+STU-7081F9F9,GP,F,18,U,GT3,A,4,4,at_home,teacher,course,mother,Higher Education
+STU-456C1019,GP,F,17,U,GT3,T,1,1,at_home,other,course,father,Primary (4th grade)
+STU-2E1D48C5,GP,F,15,U,LE3,T,1,1,at_home,other,other,mother,Primary (4th grade)
+STU-7B84202E,GP,F,15,U,GT3,T,4,2,health,services,home,mother,Higher Education
+STU-8F44186E,GP,F,16,U,GT3,T,3,3,other,other,home,father,Secondary Education
+STU-E3F7485F,GP,M,16,U,LE3,T,4,3,services,other,reputation,mother,Higher Education
+STU-48BF80C7,GP,M,16,U,LE3,T,2,2,other,other,home,mother,5th to 9th grade
+STU-0D817C3D,GP,F,17,U,GT3,A,4,4,other,teacher,home,mother,Higher Education
+STU-22A4FBE2,GP,M,15,U,LE3,A,3,2,services,other,home,mother,Secondary Education
+STU-15652EDE,GP,M,15,U,GT3,T,3,4,other,other,home,mother,Higher Education
+STU-39585AE6,GP,F,15,U,GT3,T,4,4,teacher,health,reputation,mother,Higher Education
+STU-1F46ED13,GP,F,15,U,GT3,T,2,1,services,other,reputation,father,5th to 9th grade
+STU-73E7FA9E,GP,M,15,U,LE3,T,4,4,health,services,course,father,Higher Education
+STU-5202D937,GP,M,15,U,GT3,T,4,3,teacher,other,course,mother,Higher Education
+STU-68C122A3,GP,M,15,U,GT3,A,2,2,other,other,home,other,5th to 9th grade
+STU-F0AAADE2,GP,F,16,U,GT3,T,4,4,health,other,home,mother,Higher Education
+STU-F25656AE,GP,F,16,U,GT3,T,4,4,services,services,reputation,mother,Higher Education
+STU-9EA47A4E,GP,F,16,U,GT3,T,3,3,other,other,reputation,mother,Secondary Education
+STU-503B3244,GP,M,17,U,GT3,T,3,2,services,services,course,mother,Secondary Education
+STU-419D39B0,GP,M,16,U,LE3,T,4,3,health,other,home,father,Higher Education
+STU-114E9CD1,GP,M,15,U,GT3,T,4,3,teacher,other,reputation,mother,Higher Education
+STU-9D0FB92A,GP,M,15,U,GT3,T,4,4,health,health,other,father,Higher Education
+STU-C936C263,GP,M,16,U,LE3,T,4,2,teacher,other,course,mother,Higher Education
+STU-AB078B4C,GP,M,16,U,LE3,T,2,2,other,other,reputation,mother,5th to 9th grade
+STU-5DC4E551,GP,F,15,R,GT3,T,2,4,services,health,course,mother,Higher Education
+STU-719CD4A4,GP,F,16,U,GT3,T,2,2,services,services,home,mother,5th to 9th grade
+STU-6D322426,GP,M,15,U,GT3,T,2,2,other,other,home,mother,5th to 9th grade
+STU-4595E9E2,GP,M,15,U,GT3,T,4,2,health,services,other,mother,Higher Education
+STU-09EA8E11,GP,M,16,U,LE3,A,3,4,services,other,home,mother,Higher Education
+STU-D1F6A181,GP,M,16,U,GT3,T,4,4,teacher,teacher,home,mother,Higher Education
+STU-007A4610,GP,M,15,U,GT3,T,4,4,health,services,home,mother,Higher Education
+STU-B6B62C92,GP,M,15,U,GT3,T,4,4,services,services,reputation,mother,Higher Education
+STU-168BC7D4,GP,M,15,R,GT3,T,4,3,teacher,at_home,course,mother,Higher Education
+STU-232FC95D,GP,M,15,U,LE3,T,3,3,other,other,course,mother,Secondary Education
+STU-0F7F1639,GP,M,16,U,GT3,T,3,2,other,other,home,mother,Secondary Education
+STU-346D1ED8,GP,F,15,U,GT3,T,2,3,other,other,other,father,Secondary Education
+STU-54B1B380,GP,M,15,U,LE3,T,4,3,teacher,services,home,mother,Higher Education
+STU-6FAAC800,GP,M,16,R,GT3,A,4,4,other,teacher,reputation,mother,Higher Education
+STU-9F641579,GP,F,15,R,GT3,T,3,4,services,health,course,mother,Higher Education
+STU-5FDCA47D,GP,F,15,R,GT3,T,2,2,at_home,other,reputation,mother,5th to 9th grade
+STU-7615AB39,GP,F,16,U,LE3,T,2,2,other,other,home,mother,5th to 9th grade
+STU-7D7B1066,GP,M,15,U,LE3,T,4,4,teacher,other,home,other,Higher Education
+STU-A563A07E,GP,M,15,U,GT3,T,4,4,services,teacher,course,father,Higher Education
+STU-98DBE181,GP,M,15,U,GT3,T,2,2,services,services,course,father,5th to 9th grade
+STU-9FE78E02,GP,F,16,U,LE3,T,2,2,other,at_home,course,father,5th to 9th grade
+STU-BD00A41C,GP,F,15,U,LE3,A,4,3,other,other,course,mother,Higher Education
+STU-E1BA4C96,GP,F,16,U,LE3,A,3,3,other,services,home,mother,Secondary Education
+STU-2D3C97A6,GP,M,16,U,GT3,T,4,3,health,services,reputation,mother,Higher Education
+STU-B20B9336,GP,M,15,U,GT3,T,4,2,teacher,other,home,mother,Higher Education
+STU-22671154,GP,F,15,U,GT3,T,4,4,services,teacher,other,father,Higher Education
+STU-87E1D54F,GP,F,16,U,LE3,T,2,2,services,services,course,mother,5th to 9th grade
+STU-69114641,GP,F,15,U,LE3,T,4,2,health,other,other,mother,Higher Education
+STU-A50F99FB,GP,M,15,U,LE3,A,4,2,health,health,other,father,Higher Education
+STU-3D23468A,GP,F,15,U,GT3,T,4,4,services,services,course,mother,Higher Education
+STU-B3E524BB,GP,F,15,U,LE3,A,3,3,other,other,other,mother,Secondary Education
+STU-E43870D1,GP,F,16,U,GT3,A,2,1,other,other,other,mother,5th to 9th grade
+STU-F25C7CF0,GP,F,15,U,GT3,A,4,3,services,services,reputation,mother,Higher Education
+STU-300C102A,GP,M,15,U,GT3,T,4,4,teacher,health,reputation,mother,Higher Education
+STU-A8678075,GP,M,15,U,LE3,T,1,2,other,at_home,home,father,5th to 9th grade
+STU-401BD1B7,GP,F,16,U,GT3,T,4,2,services,other,course,mother,Higher Education
+STU-0192628A,GP,F,16,R,GT3,T,4,4,health,teacher,other,mother,Higher Education
+STU-0BA134A2,GP,F,16,U,GT3,T,1,1,services,services,course,father,Primary (4th grade)
+STU-687206FE,GP,F,16,U,LE3,T,1,2,other,services,reputation,father,5th to 9th grade
+STU-FF9874A2,GP,F,16,U,GT3,T,4,3,teacher,health,home,mother,Higher Education
+STU-5F6AA41F,GP,F,15,U,LE3,T,4,3,services,services,reputation,father,Higher Education
+STU-A0C55580,GP,F,16,U,LE3,T,4,3,teacher,services,course,mother,Higher Education
+STU-30133F89,GP,M,15,U,GT3,A,4,4,other,services,reputation,mother,Higher Education
+STU-0D15B186,GP,F,16,U,GT3,T,3,1,services,other,course,mother,Secondary Education
+STU-C2DED612,GP,F,15,R,LE3,T,2,2,health,services,reputation,mother,5th to 9th grade
+STU-5937C88F,GP,F,15,R,LE3,T,3,1,other,other,reputation,father,Secondary Education
+STU-D87B8E95,GP,M,16,U,GT3,T,3,1,other,other,reputation,father,Secondary Education
+STU-E74C1FCA,GP,M,15,U,GT3,T,4,2,other,other,course,mother,Higher Education
+STU-F0400DDC,GP,F,15,R,GT3,T,1,1,other,other,reputation,mother,Primary (4th grade)
+STU-5BDD2FB3,GP,M,16,U,GT3,T,3,1,other,other,reputation,mother,Secondary Education
+STU-E0D89C36,GP,F,16,U,GT3,T,3,3,other,services,home,mother,Secondary Education
+STU-98ED6E9D,GP,M,15,U,GT3,T,4,3,teacher,other,home,mother,Higher Education
+STU-6681E7A7,GP,M,15,U,GT3,T,4,0,teacher,other,course,mother,Higher Education
+STU-0A3D4FF8,GP,F,16,U,GT3,T,2,2,other,other,reputation,mother,5th to 9th grade
+STU-69668EB0,GP,M,17,U,GT3,T,2,1,other,other,home,mother,5th to 9th grade
+STU-DBD7451A,GP,F,16,U,GT3,T,3,4,at_home,other,course,mother,Higher Education
+STU-C265FABC,GP,M,15,U,GT3,T,2,3,other,services,course,father,Secondary Education
+STU-63A420DB,GP,M,15,U,GT3,T,2,3,other,other,home,mother,Secondary Education
+STU-FEFC7BE8,GP,F,15,U,LE3,T,3,2,services,other,reputation,mother,Secondary Education
+STU-A0D4610E,GP,M,15,U,LE3,T,2,2,services,services,home,mother,5th to 9th grade
+STU-18A00DB2,GP,F,15,U,GT3,T,1,1,other,other,home,father,Primary (4th grade)
+STU-85EF4016,GP,F,15,U,GT3,T,4,4,services,services,reputation,father,Higher Education
+STU-06CAEA8E,GP,F,16,U,LE3,T,2,2,at_home,other,course,mother,5th to 9th grade
+STU-610CC2D9,GP,F,15,U,GT3,T,4,2,other,other,reputation,mother,Higher Education
+STU-9BB406DC,GP,M,16,U,GT3,T,2,2,services,other,reputation,father,5th to 9th grade
+STU-794660FB,GP,M,16,U,LE3,A,4,4,teacher,health,reputation,mother,Higher Education
+STU-9DF9B249,GP,F,16,U,GT3,T,3,3,other,other,home,mother,Secondary Education
+STU-A6E6FD26,GP,F,15,U,GT3,T,4,3,services,other,reputation,mother,Higher Education
+STU-EEF94D78,GP,F,16,U,LE3,T,3,1,other,other,home,father,Secondary Education
+STU-E4B6DF55,GP,F,16,U,GT3,T,4,2,teacher,services,home,mother,Higher Education
+STU-93EB2F14,GP,M,15,U,LE3,T,2,2,services,health,reputation,mother,5th to 9th grade
+STU-75EFED09,GP,F,15,R,GT3,T,1,1,at_home,other,home,mother,Primary (4th grade)
+STU-46ADB2CE,GP,M,16,R,GT3,T,4,3,services,other,reputation,mother,Higher Education
+STU-03E8CAC7,GP,F,16,U,GT3,T,2,1,other,other,course,mother,5th to 9th grade
+STU-EEBCF729,GP,F,16,U,GT3,T,4,4,other,other,reputation,mother,Higher Education
+STU-9520AD4E,GP,F,16,U,GT3,T,4,3,other,at_home,course,mother,Higher Education
+STU-F3C0B480,GP,M,16,U,GT3,T,4,4,services,services,other,mother,Higher Education
+STU-03237CBA,GP,M,16,U,GT3,T,4,4,services,teacher,other,father,Higher Education
+STU-23F7C36E,GP,M,15,U,GT3,T,4,4,services,other,course,mother,Higher Education
+STU-60D2AE52,GP,F,15,U,GT3,T,3,2,services,other,home,mother,Secondary Education
+STU-8C34293B,GP,M,15,U,GT3,A,3,4,services,other,course,mother,Higher Education
+STU-44EF5F3E,GP,F,15,U,GT3,A,3,3,other,health,reputation,father,Secondary Education
+STU-18B8E9FD,GP,F,15,U,GT3,T,2,2,other,other,course,mother,5th to 9th grade
+STU-89274968,GP,M,16,U,GT3,T,3,3,services,other,home,father,Secondary Education
+STU-ABFA4D58,GP,M,15,R,GT3,T,4,4,other,other,home,father,Higher Education
+STU-D0F198AC,GP,F,16,U,LE3,T,4,4,health,health,other,mother,Higher Education
+STU-63B707DA,GP,M,15,U,LE3,A,4,4,teacher,teacher,course,mother,Higher Education
+STU-945AD5F8,GP,F,16,R,GT3,T,3,3,services,other,reputation,father,Secondary Education
+STU-281EA029,GP,F,16,U,GT3,T,2,2,at_home,other,home,mother,5th to 9th grade
+STU-225F3192,GP,M,15,U,LE3,T,4,2,teacher,other,course,mother,Higher Education
+STU-90B77E7D,GP,M,15,R,GT3,T,2,1,health,services,reputation,mother,5th to 9th grade
+STU-11690B74,GP,M,16,U,GT3,T,4,4,teacher,teacher,course,father,Higher Education
+STU-C0C6373F,GP,M,15,U,GT3,T,4,4,other,teacher,reputation,father,Higher Education
+STU-F4216162,GP,M,16,U,GT3,T,3,3,other,services,home,father,Secondary Education
+STU-F4475577,GP,M,17,R,GT3,T,1,3,other,other,course,father,Secondary Education
+STU-C98B1F12,GP,M,15,U,GT3,T,3,4,other,other,reputation,father,Higher Education
+STU-951DF931,GP,F,15,U,GT3,T,1,2,at_home,services,course,mother,5th to 9th grade
+STU-4450B4D0,GP,M,15,U,GT3,T,2,2,services,services,home,father,5th to 9th grade
+STU-1E9EAC45,GP,F,16,U,LE3,T,2,4,other,health,course,father,Higher Education
+STU-DAAA60A0,GP,M,16,U,GT3,T,4,4,health,other,course,mother,Higher Education
+STU-AA8D33B7,GP,F,16,U,GT3,T,2,2,other,other,home,mother,5th to 9th grade
+STU-3CAF5445,GP,M,15,U,GT3,T,3,4,services,services,home,father,Higher Education
+STU-0D20982C,GP,F,15,U,LE3,A,3,4,other,other,home,mother,Higher Education
+STU-90AC2BB0,GP,F,19,U,GT3,T,0,1,at_home,other,course,other,Primary (4th grade)
+STU-83771651,GP,M,18,R,GT3,T,2,2,services,other,reputation,mother,5th to 9th grade
+STU-8937BE7E,GP,M,16,R,GT3,T,4,4,teacher,teacher,course,mother,Higher Education
+STU-E2ECAE54,GP,F,15,R,GT3,T,3,4,services,teacher,course,father,Higher Education
+STU-B681FE76,GP,F,15,U,GT3,T,1,1,at_home,other,course,mother,Primary (4th grade)
+STU-2062C61C,GP,F,17,U,LE3,T,2,2,other,other,course,father,5th to 9th grade
+STU-EB3589B5,GP,F,16,U,GT3,A,3,4,services,other,course,father,Higher Education
+STU-60E1C036,GP,M,15,R,GT3,T,3,4,at_home,teacher,course,mother,Higher Education
+STU-A823FE17,GP,F,15,U,GT3,T,4,4,services,at_home,course,mother,Higher Education
+STU-77852A18,GP,M,17,R,GT3,T,3,4,at_home,other,course,mother,Higher Education
+STU-E1DECCF8,GP,F,16,U,GT3,A,3,3,other,other,course,other,Secondary Education
+STU-A5F1F649,GP,M,16,U,LE3,T,1,1,services,other,course,mother,Primary (4th grade)
+STU-69D23BE3,GP,F,15,U,GT3,T,4,4,teacher,teacher,course,mother,Higher Education
+STU-5D8F9A50,GP,M,15,U,GT3,T,4,3,teacher,services,course,father,Higher Education
+STU-F10E7CA7,GP,M,16,U,LE3,T,2,2,services,services,reputation,father,5th to 9th grade
+STU-D82D98E2,GP,F,15,U,GT3,T,4,4,teacher,services,course,mother,Higher Education
+STU-D062DEF0,GP,F,16,U,LE3,T,1,1,at_home,at_home,course,mother,Primary (4th grade)
+STU-B512432D,GP,F,15,U,GT3,T,1,1,other,services,course,father,Primary (4th grade)
+STU-3B5D435F,GP,F,15,U,GT3,T,3,2,health,services,home,father,Secondary Education
+STU-82865406,GP,F,15,U,GT3,T,1,2,at_home,other,course,mother,5th to 9th grade
+STU-632BF98A,GP,M,15,U,LE3,A,2,1,services,other,course,mother,5th to 9th grade
+STU-6C6F63DD,GP,M,18,U,LE3,T,1,1,other,other,course,mother,Primary (4th grade)
+STU-ABEE31ED,GP,M,16,U,LE3,T,2,1,at_home,other,course,mother,5th to 9th grade
+STU-4431EC67,GP,F,15,R,GT3,T,3,3,services,services,reputation,other,Secondary Education
+STU-82460453,GP,M,19,U,GT3,T,3,2,services,at_home,home,mother,Secondary Education
+STU-DF320FB3,GP,F,17,U,GT3,T,4,4,other,teacher,course,mother,Higher Education
+STU-17618AFF,GP,M,15,R,GT3,T,2,3,at_home,services,course,mother,Secondary Education
+STU-08AEF502,GP,M,17,R,LE3,T,1,2,other,other,reputation,mother,5th to 9th grade
+STU-3D082156,GP,F,18,R,GT3,T,1,1,at_home,other,course,mother,Primary (4th grade)
+STU-119777A5,GP,M,16,R,GT3,T,2,2,at_home,other,course,mother,5th to 9th grade
+STU-28925959,GP,M,16,U,GT3,T,3,3,other,services,course,father,Secondary Education
+STU-DA9E5C08,GP,M,17,R,LE3,T,2,1,at_home,other,course,mother,5th to 9th grade
+STU-5D33127B,GP,M,15,R,GT3,T,3,2,other,other,course,mother,Secondary Education
+STU-AF887F37,GP,M,16,U,LE3,T,1,2,other,other,course,mother,5th to 9th grade
+STU-101E946A,GP,M,17,U,GT3,T,1,3,at_home,services,course,father,Secondary Education
+STU-BBAFAF13,GP,M,17,R,LE3,T,1,1,other,services,course,mother,Primary (4th grade)
+STU-754B2702,GP,M,16,U,GT3,T,3,2,services,services,course,mother,Secondary Education
+STU-785C0BE2,GP,M,16,U,GT3,T,2,2,other,other,course,father,5th to 9th grade
+STU-E15E3EC8,GP,F,16,U,GT3,T,4,2,health,services,home,father,Higher Education
+STU-7AF39DAA,GP,F,16,U,GT3,T,2,2,other,other,home,mother,5th to 9th grade
+STU-05500DAB,GP,F,16,U,GT3,T,4,4,health,health,reputation,mother,Higher Education
+STU-CE66669F,GP,M,16,U,GT3,T,3,4,other,other,course,father,Higher Education
+STU-685FCE56,GP,M,16,U,GT3,T,1,0,other,other,reputation,mother,Primary (4th grade)
+STU-F79B62BD,GP,M,17,U,LE3,T,4,4,teacher,other,reputation,mother,Higher Education
+STU-449A60F3,GP,F,16,U,GT3,T,1,3,at_home,services,home,mother,Secondary Education
+STU-0256B23F,GP,F,16,U,LE3,T,3,3,other,other,reputation,mother,Secondary Education
+STU-133463C2,GP,M,17,U,LE3,T,4,3,teacher,other,course,mother,Higher Education
+STU-D0D98679,GP,F,16,U,GT3,T,2,2,services,other,reputation,mother,5th to 9th grade
+STU-A9CD44A2,GP,M,17,U,GT3,T,3,3,other,other,reputation,father,Secondary Education
+STU-28B0A0EB,GP,M,16,R,GT3,T,4,2,teacher,services,other,mother,Higher Education
+STU-EA531AD3,GP,M,17,U,GT3,T,4,3,other,other,course,mother,Higher Education
+STU-CF3B0A6D,GP,M,16,U,GT3,T,4,3,teacher,other,home,mother,Higher Education
+STU-AD5ED40A,GP,F,17,U,GT3,T,2,4,services,services,reputation,father,Higher Education
+STU-6DCF56F1,GP,F,17,U,LE3,T,3,3,other,other,reputation,mother,Secondary Education
+STU-C8BEF087,GP,F,16,U,GT3,T,3,2,other,other,reputation,mother,Secondary Education
+STU-0A8917A8,GP,M,17,U,GT3,T,3,3,services,services,other,mother,Secondary Education
+STU-A264454B,GP,M,16,U,GT3,T,1,2,services,services,other,mother,5th to 9th grade
+STU-21326CB6,GP,M,16,U,LE3,T,2,1,other,other,course,mother,5th to 9th grade
+STU-F1A11A40,GP,F,17,U,GT3,A,3,3,health,other,reputation,mother,Secondary Education
+STU-548680C9,GP,M,17,R,GT3,T,1,2,at_home,other,home,mother,5th to 9th grade
+STU-A47A6B49,GP,F,16,U,GT3,T,2,3,services,services,course,mother,Secondary Education
+STU-B42126A7,GP,F,17,U,GT3,T,1,1,at_home,services,course,mother,Primary (4th grade)
+STU-F4073123,GP,M,17,U,GT3,T,1,2,at_home,services,other,other,5th to 9th grade
+STU-494C9799,GP,M,16,R,GT3,T,3,3,services,services,reputation,mother,Secondary Education
+STU-07B44D91,GP,M,16,U,GT3,T,2,3,other,other,home,father,Secondary Education
+STU-CB5D7ADB,GP,F,17,U,LE3,T,2,4,services,services,course,father,Higher Education
+STU-64359A7E,GP,M,17,U,GT3,T,4,4,services,teacher,home,mother,Higher Education
+STU-597B5529,GP,M,16,R,LE3,T,3,3,teacher,other,home,father,Secondary Education
+STU-D0A23D7D,GP,F,17,U,GT3,T,4,4,services,teacher,home,mother,Higher Education
+STU-C3D573AC,GP,F,16,U,LE3,T,4,4,teacher,teacher,reputation,mother,Higher Education
+STU-B9438DC5,GP,F,16,U,GT3,T,4,3,health,other,home,mother,Higher Education
+STU-E9333265,GP,F,16,U,GT3,T,2,3,other,other,reputation,mother,Secondary Education
+STU-CA973392,GP,F,17,U,GT3,T,1,1,other,other,course,mother,Primary (4th grade)
+STU-A241D719,GP,F,17,R,GT3,T,2,2,other,other,reputation,mother,5th to 9th grade
+STU-5CFACFC5,GP,F,16,R,GT3,T,2,2,services,services,reputation,mother,5th to 9th grade
+STU-755EA237,GP,F,17,U,GT3,T,3,4,at_home,services,home,mother,Higher Education
+STU-B25B0B8A,GP,F,16,U,GT3,A,3,1,services,other,course,mother,Secondary Education
+STU-A9D0EC5B,GP,F,16,U,GT3,T,4,3,teacher,other,other,mother,Higher Education
+STU-A209EC8B,GP,F,16,U,GT3,T,1,1,at_home,other,home,mother,Primary (4th grade)
+STU-2DCA2DBA,GP,F,17,R,GT3,T,4,3,teacher,other,reputation,mother,Higher Education
+STU-2E15ECC6,GP,F,19,U,GT3,T,3,3,other,other,reputation,other,Secondary Education
+STU-94376763,GP,M,17,U,LE3,T,4,4,services,other,home,mother,Higher Education
+STU-F1AC58BF,GP,F,16,U,GT3,A,2,2,other,other,reputation,mother,5th to 9th grade
+STU-03C760E9,GP,M,18,U,GT3,T,2,2,services,other,home,mother,5th to 9th grade
+STU-8AEA16C1,GP,F,17,R,LE3,T,4,4,services,other,other,mother,Higher Education
+STU-A0CB416D,GP,F,17,U,LE3,T,3,2,other,other,reputation,mother,Secondary Education
+STU-0298B413,GP,F,17,U,GT3,T,4,3,other,other,reputation,mother,Higher Education
+STU-C5AA3FF9,GP,M,18,U,LE3,T,3,3,services,health,home,father,Secondary Education
+STU-AFAE430B,GP,F,17,U,GT3,T,2,3,at_home,other,home,father,Secondary Education
+STU-5E06A373,GP,F,17,U,GT3,T,2,2,at_home,at_home,course,mother,5th to 9th grade
+STU-DDFFE179,GP,F,17,R,GT3,T,2,1,at_home,services,reputation,mother,5th to 9th grade
+STU-952AD2DE,GP,F,17,U,GT3,T,1,1,at_home,other,reputation,mother,Primary (4th grade)
+STU-606A0FF9,GP,F,16,U,GT3,T,2,3,services,teacher,other,mother,Secondary Education
+STU-B77CE589,GP,M,18,U,GT3,T,2,2,other,other,home,mother,5th to 9th grade
+STU-F782029E,GP,F,16,U,GT3,T,4,4,teacher,services,home,mother,Higher Education
+STU-BFAD3F0C,GP,F,18,R,GT3,T,3,1,other,other,reputation,mother,Secondary Education
+STU-ACF9A61B,GP,F,17,U,GT3,T,3,2,other,other,course,mother,Secondary Education
+STU-03EBED53,GP,M,17,U,LE3,T,2,3,services,services,reputation,father,Secondary Education
+STU-1CA24876,GP,M,18,U,LE3,T,2,1,at_home,other,course,mother,5th to 9th grade
+STU-8E2F6D85,GP,F,17,U,GT3,A,2,1,other,other,course,mother,5th to 9th grade
+STU-AD672812,GP,F,17,U,LE3,T,4,3,health,other,reputation,father,Higher Education
+STU-B31BF7A8,GP,M,17,R,GT3,T,2,2,other,other,course,father,5th to 9th grade
+STU-6239E0AA,GP,M,17,U,GT3,T,4,4,teacher,teacher,reputation,mother,Higher Education
+STU-A384DF3F,GP,M,16,U,GT3,T,4,4,health,other,reputation,father,Higher Education
+STU-C0906E54,GP,M,16,U,LE3,T,1,1,other,other,home,mother,Primary (4th grade)
+STU-7C5275E4,GP,M,16,U,GT3,T,3,2,at_home,other,reputation,mother,Secondary Education
+STU-399BD0DC,GP,M,17,U,LE3,T,2,2,other,other,home,father,5th to 9th grade
+STU-EEE66B23,GP,F,16,U,GT3,T,2,1,other,other,home,mother,5th to 9th grade
+STU-FD414DCB,GP,F,17,R,GT3,T,2,1,at_home,services,course,mother,5th to 9th grade
+STU-D0C0FB9C,GP,M,18,U,GT3,T,2,2,other,services,reputation,father,5th to 9th grade
+STU-384A4DC6,GP,M,17,U,LE3,T,4,3,health,other,course,mother,Higher Education
+STU-C6493C68,GP,M,17,R,LE3,A,4,4,teacher,other,course,mother,Higher Education
+STU-5D622B00,GP,M,16,U,LE3,T,4,3,teacher,other,course,mother,Higher Education
+STU-A88F7DD8,GP,M,16,U,GT3,T,4,4,services,services,course,mother,Higher Education
+STU-D47BC8C3,GP,F,18,U,GT3,T,2,1,other,other,course,other,5th to 9th grade
+STU-55CBB3CD,GP,M,16,U,GT3,T,2,1,other,other,course,mother,5th to 9th grade
+STU-90A8CAE5,GP,M,17,U,GT3,T,2,3,other,other,course,father,Secondary Education
+STU-13A3D4D6,GP,M,22,U,GT3,T,3,1,services,services,other,mother,Secondary Education
+STU-F5A769BC,GP,M,18,R,LE3,T,3,3,other,services,course,mother,Secondary Education
+STU-1942A5DD,GP,M,16,U,GT3,T,0,2,other,other,other,mother,5th to 9th grade
+STU-D1D91C87,GP,M,18,U,GT3,T,3,2,services,other,course,mother,Secondary Education
+STU-B6D3191C,GP,M,16,U,GT3,T,3,3,at_home,other,reputation,other,Secondary Education
+STU-0A169768,GP,M,18,U,GT3,T,2,1,services,services,other,mother,5th to 9th grade
+STU-2506154C,GP,M,16,R,GT3,T,2,1,other,other,course,mother,5th to 9th grade
+STU-7877D315,GP,M,17,R,GT3,T,2,1,other,other,course,mother,5th to 9th grade
+STU-AF2BAA0C,GP,M,17,U,LE3,T,1,1,health,other,course,mother,Primary (4th grade)
+STU-B7D2C986,GP,F,17,U,LE3,T,4,2,teacher,services,reputation,mother,Higher Education
+STU-B9EFB0DE,GP,M,19,U,LE3,A,4,3,services,at_home,reputation,mother,Higher Education
+STU-17D92758,GP,M,18,U,GT3,T,2,1,other,other,home,mother,5th to 9th grade
+STU-F341E88E,GP,F,17,U,LE3,T,2,2,services,services,course,father,5th to 9th grade
+STU-5032226C,GP,F,18,U,GT3,T,4,3,services,other,home,father,Higher Education
+STU-729F8030,GP,M,18,U,GT3,T,4,3,teacher,other,course,mother,Higher Education
+STU-9AA0DF8E,GP,M,18,R,GT3,T,3,2,other,other,course,mother,Secondary Education
+STU-8420A4D7,GP,F,17,U,GT3,T,3,3,other,other,home,mother,Secondary Education
+STU-939050D8,GP,F,18,U,GT3,T,2,2,at_home,services,home,mother,5th to 9th grade
+STU-663B05F4,GP,M,18,R,LE3,A,3,4,other,other,reputation,mother,Higher Education
+STU-83C293F0,GP,M,17,U,GT3,T,3,1,services,other,other,mother,Secondary Education
+STU-C6BC5A32,GP,F,18,R,GT3,T,4,4,teacher,other,reputation,mother,Higher Education
+STU-6225567B,GP,M,18,U,GT3,T,4,2,health,other,reputation,father,Higher Education
+STU-2ACF751E,GP,F,18,R,GT3,T,2,1,other,other,reputation,mother,5th to 9th grade
+STU-40EBB74A,GP,F,19,U,GT3,T,3,3,other,services,home,other,Secondary Education
+STU-B2DFBB62,GP,F,18,U,GT3,T,2,3,other,services,reputation,father,Secondary Education
+STU-77569D3A,GP,F,18,U,LE3,T,1,1,other,other,home,mother,Primary (4th grade)
+STU-EC7CDC45,GP,M,17,R,GT3,T,1,2,at_home,at_home,home,mother,5th to 9th grade
+STU-F8A5F432,GP,F,17,U,GT3,T,2,4,at_home,health,reputation,mother,Higher Education
+STU-1239B6F2,GP,F,17,U,LE3,T,2,2,services,other,course,mother,5th to 9th grade
+STU-868C470A,GP,F,18,R,GT3,A,3,2,other,services,home,mother,Secondary Education
+STU-C1BB86AE,GP,M,18,U,GT3,T,4,4,teacher,services,home,mother,Higher Education
+STU-AFFE5E56,GP,F,18,U,GT3,T,4,4,health,health,reputation,father,Higher Education
+STU-33DA4042,GP,M,18,U,LE3,T,4,3,teacher,services,course,mother,Higher Education
+STU-D9731AC3,GP,M,17,U,LE3,A,4,1,services,other,home,mother,Higher Education
+STU-CF0BFA6F,GP,M,17,U,LE3,A,3,2,teacher,services,home,mother,Secondary Education
+STU-B5995CD1,GP,F,18,R,LE3,T,1,1,at_home,other,reputation,mother,Primary (4th grade)
+STU-E99A0A05,GP,F,18,U,GT3,T,1,1,other,other,home,mother,Primary (4th grade)
+STU-7681CF07,GP,F,17,U,GT3,T,2,2,other,other,course,mother,5th to 9th grade
+STU-3E0DD1D5,GP,M,17,U,GT3,T,1,1,other,other,reputation,father,Primary (4th grade)
+STU-DA6D3B87,GP,F,18,U,GT3,T,2,2,at_home,at_home,other,mother,5th to 9th grade
+STU-166D1425,GP,F,17,U,GT3,T,1,1,services,teacher,reputation,mother,Primary (4th grade)
+STU-DC6B1F4F,GP,M,18,U,GT3,T,2,1,services,services,reputation,mother,5th to 9th grade
+STU-2DDE1326,GP,M,18,U,LE3,A,4,4,teacher,teacher,reputation,mother,Higher Education
+STU-DB53C071,GP,M,18,U,GT3,T,4,2,teacher,other,home,mother,Higher Education
+STU-E810C8F8,GP,F,17,U,GT3,T,4,3,health,services,reputation,mother,Higher Education
+STU-87F99BD0,GP,F,18,U,LE3,T,2,1,services,at_home,reputation,mother,5th to 9th grade
+STU-D2DBCC0A,GP,F,17,R,LE3,T,3,1,services,other,reputation,mother,Secondary Education
+STU-33295AD4,GP,M,18,R,LE3,T,3,2,services,other,reputation,mother,Secondary Education
+STU-3B408F4C,GP,M,17,U,GT3,T,3,3,health,other,home,mother,Secondary Education
+STU-E553DB82,GP,F,19,U,GT3,T,4,4,health,other,reputation,other,Higher Education
+STU-E55D0EBF,GP,F,18,U,LE3,T,4,3,other,other,home,other,Higher Education
+STU-02538BD8,GP,F,18,U,GT3,T,4,3,other,other,reputation,father,Higher Education
+STU-5C28817B,GP,M,18,U,LE3,T,4,4,teacher,teacher,home,mother,Higher Education
+STU-07E38447,GP,F,18,U,LE3,A,4,4,health,other,home,mother,Higher Education
+STU-4140EDDD,GP,M,17,U,LE3,T,4,4,other,teacher,home,father,Higher Education
+STU-22B7FA9B,GP,F,17,U,GT3,T,4,2,other,other,reputation,mother,Higher Education
+STU-52B3F146,GP,F,17,U,GT3,T,3,2,health,health,reputation,father,Secondary Education
+STU-DB6D8BD0,GP,M,19,U,GT3,T,3,3,other,other,home,other,Secondary Education
+STU-8C94FC36,GP,F,18,U,GT3,T,2,4,services,at_home,reputation,other,Higher Education
+STU-71A1F5C2,GP,M,20,U,GT3,A,3,2,services,other,course,other,Secondary Education
+STU-35632BFA,GP,M,19,U,GT3,T,4,4,teacher,services,reputation,other,Higher Education
+STU-E7D1A49D,GP,M,19,R,GT3,T,3,3,other,services,reputation,father,Secondary Education
+STU-8CA35DF2,GP,F,19,U,LE3,T,1,1,at_home,other,reputation,other,Primary (4th grade)
+STU-26E212E1,GP,F,19,U,LE3,T,1,2,services,services,home,other,5th to 9th grade
+STU-430236AA,GP,F,19,U,GT3,T,2,1,at_home,other,other,other,5th to 9th grade
+STU-9694C38D,GP,M,19,U,GT3,T,1,2,other,services,course,other,5th to 9th grade
+STU-B4C8AE05,GP,F,19,U,LE3,T,3,2,services,other,reputation,other,Secondary Education
+STU-055BA87C,GP,F,19,U,GT3,T,1,1,at_home,health,home,other,Primary (4th grade)
+STU-3D4DFEA8,GP,F,19,R,GT3,T,2,3,other,other,reputation,other,Secondary Education
+STU-94E39F61,GP,F,18,U,GT3,T,2,1,services,other,course,mother,5th to 9th grade
+STU-DD8DF6E2,GP,F,18,U,GT3,T,4,3,other,other,course,mother,Higher Education
+STU-AA3A7090,GP,F,17,R,GT3,T,3,4,at_home,services,course,father,Higher Education
+STU-5B44A9D3,GP,F,18,U,GT3,T,4,4,teacher,other,course,mother,Higher Education
+STU-DE2ACAEE,GP,F,17,U,GT3,A,4,3,services,services,course,mother,Higher Education
+STU-5A229EF5,GP,F,17,U,GT3,T,2,2,other,other,course,mother,5th to 9th grade
+STU-A8C0AD64,GP,F,17,R,LE3,T,2,2,services,services,course,mother,5th to 9th grade
+STU-99ED1429,GP,F,17,U,GT3,T,3,1,services,services,course,father,Secondary Education
+STU-51385447,GP,F,17,U,LE3,T,0,2,at_home,at_home,home,father,5th to 9th grade
+STU-3DB65053,GP,M,18,U,GT3,T,4,4,other,other,course,mother,Higher Education
+STU-4567FD41,GP,M,17,U,GT3,T,3,3,other,services,reputation,mother,Secondary Education
+STU-01EB470B,GP,M,17,R,GT3,T,2,2,services,other,course,mother,5th to 9th grade
+STU-8ADF8E42,GP,F,17,U,GT3,T,4,4,teacher,services,course,mother,Higher Education
+STU-5D4FC8BB,GP,F,17,U,GT3,T,4,4,teacher,teacher,course,mother,Higher Education
+STU-E8C83903,GP,M,18,U,LE3,T,2,2,other,other,course,mother,5th to 9th grade
+STU-DF3DFD1C,GP,F,17,R,GT3,T,2,4,at_home,other,course,father,Higher Education
+STU-CFE96450,GP,F,18,U,GT3,T,3,3,services,services,home,mother,Secondary Education
+STU-6EDD3247,GP,F,18,U,LE3,T,2,2,other,other,home,other,5th to 9th grade
+STU-2DDFB354,GP,F,18,R,GT3,T,2,2,at_home,other,course,mother,5th to 9th grade
+STU-904B8855,GP,F,17,U,GT3,T,3,4,services,other,course,mother,Higher Education
+STU-1668F683,GP,F,19,R,GT3,A,3,1,services,at_home,home,other,Secondary Education
+STU-32AC7410,GP,F,17,U,GT3,T,3,2,other,other,home,mother,Secondary Education
+STU-0638F977,GP,F,18,U,LE3,T,3,3,services,services,home,mother,Secondary Education
+STU-6DF9BB94,GP,F,17,R,GT3,A,3,2,other,other,home,mother,Secondary Education
+STU-D3126E3E,GP,F,19,U,GT3,T,2,1,services,services,home,other,5th to 9th grade
+STU-CD81E3F8,GP,M,18,U,LE3,T,3,4,services,other,home,mother,Higher Education
+STU-21DAB688,GP,F,17,U,GT3,A,2,2,at_home,at_home,home,father,5th to 9th grade
+STU-732F6983,GP,F,18,U,GT3,T,2,3,at_home,other,course,mother,Secondary Education
+STU-70C171D3,GP,F,18,U,GT3,T,3,2,other,services,other,mother,Secondary Education
+STU-3F9ADA08,GP,M,18,R,GT3,T,4,3,teacher,services,course,mother,Higher Education
+STU-51027C17,GP,M,18,U,GT3,T,4,3,teacher,other,course,mother,Higher Education
+STU-18F11CAF,GP,F,17,U,GT3,T,4,3,health,other,reputation,mother,Higher Education
+STU-0686CB8F,MS,M,18,R,GT3,T,3,2,other,other,course,mother,Secondary Education
+STU-9F297993,MS,M,19,R,GT3,T,1,1,other,services,home,other,Primary (4th grade)
+STU-84F79B9A,MS,M,17,U,GT3,T,3,3,health,other,course,mother,Secondary Education
+STU-B10FDE2C,MS,M,18,U,LE3,T,1,3,at_home,services,course,mother,Secondary Education
+STU-D3220DD4,MS,M,19,R,GT3,T,1,1,other,other,home,other,Primary (4th grade)
+STU-3DDAF610,MS,M,17,R,GT3,T,4,3,services,other,home,mother,Higher Education
+STU-9E49539E,MS,F,18,U,GT3,T,3,3,services,services,course,father,Secondary Education
+STU-DFE44DDA,MS,F,17,R,GT3,T,4,4,teacher,services,other,father,Higher Education
+STU-4061D44D,MS,F,17,U,LE3,A,3,2,services,other,reputation,mother,Secondary Education
+STU-33700E51,MS,M,18,U,LE3,T,1,1,other,services,home,father,Primary (4th grade)
+STU-42CD0E75,MS,F,18,U,LE3,T,1,1,at_home,services,course,father,Primary (4th grade)
+STU-DD40117C,MS,F,18,R,LE3,A,1,4,at_home,other,course,mother,Higher Education
+STU-224B67E3,MS,M,18,R,LE3,T,1,1,at_home,other,other,mother,Primary (4th grade)
+STU-8D860544,MS,F,18,U,GT3,T,3,3,services,services,other,mother,Secondary Education
+STU-C73835A0,MS,F,17,U,LE3,T,4,4,at_home,at_home,course,mother,Higher Education
+STU-4A82C4A3,MS,F,17,R,GT3,T,1,2,other,services,course,father,5th to 9th grade
+STU-D415BBAC,MS,M,18,R,GT3,T,1,3,at_home,other,course,mother,Secondary Education
+STU-C96F7513,MS,M,18,U,LE3,T,4,4,teacher,services,other,mother,Higher Education
+STU-68EC39A5,MS,F,17,R,GT3,T,1,1,other,services,reputation,mother,Primary (4th grade)
+STU-ED2890D4,MS,F,18,U,GT3,T,2,3,at_home,services,course,father,Secondary Education
+STU-ED287E8F,MS,F,18,R,GT3,T,4,4,other,teacher,other,father,Higher Education
+STU-C63135EB,MS,F,19,U,LE3,T,3,2,services,services,home,other,Secondary Education
+STU-D0DDB203,MS,M,18,R,LE3,T,1,2,at_home,services,other,father,5th to 9th grade
+STU-48FC5D1C,MS,F,17,U,GT3,T,2,2,other,at_home,home,mother,5th to 9th grade
+STU-8645C616,MS,F,17,R,GT3,T,1,2,other,other,course,mother,5th to 9th grade
+STU-C1D8824B,MS,F,18,R,LE3,T,4,4,other,other,reputation,mother,Higher Education
+STU-FE883270,MS,F,18,R,GT3,T,1,1,other,other,home,mother,Primary (4th grade)
+STU-F513BE06,MS,F,20,U,GT3,T,4,2,health,other,course,other,Higher Education
+STU-9A79F1EE,MS,F,18,R,LE3,T,4,4,teacher,services,course,mother,Higher Education
+STU-523CB612,MS,F,18,U,GT3,T,3,3,other,other,home,mother,Secondary Education
+STU-C547C143,MS,F,17,R,GT3,T,3,1,at_home,other,reputation,mother,Secondary Education
+STU-8A5579F7,MS,M,18,U,GT3,T,4,4,teacher,teacher,home,father,Higher Education
+STU-84E6366F,MS,M,18,R,GT3,T,2,1,other,other,other,mother,5th to 9th grade
+STU-06BDF63B,MS,M,17,U,GT3,T,2,3,other,services,home,father,Secondary Education
+STU-8717E8F0,MS,M,19,R,GT3,T,1,1,other,services,other,mother,Primary (4th grade)
+STU-9E51D21F,MS,M,18,R,GT3,T,4,2,other,other,home,father,Higher Education
+STU-F1CCF36D,MS,F,18,R,GT3,T,2,2,at_home,other,other,mother,5th to 9th grade
+STU-995D869B,MS,F,18,R,GT3,T,4,4,teacher,at_home,reputation,mother,Higher Education
+STU-D67573DD,MS,F,19,R,GT3,T,2,3,services,other,course,mother,Secondary Education
+STU-6B793CCF,MS,F,18,U,LE3,T,3,1,teacher,services,course,mother,Secondary Education
+STU-68A811B9,MS,F,18,U,GT3,T,1,1,other,other,course,mother,Primary (4th grade)
+STU-C84026A2,MS,M,20,U,LE3,A,2,2,services,services,course,other,5th to 9th grade
+STU-FA0CCB2F,MS,M,17,U,LE3,T,3,1,services,services,course,mother,Secondary Education
+STU-9569D833,MS,M,21,R,GT3,T,1,1,other,other,course,other,Primary (4th grade)
+STU-D61AD816,MS,M,18,R,LE3,T,3,2,services,other,course,mother,Secondary Education
+STU-A8023ED7,MS,M,19,U,LE3,T,1,1,other,at_home,course,father,Primary (4th grade)
+STU-DBED2E78,GP,M,16,U,GT3,T,2,3,other,other,course,mother,Secondary Education
+STU-BBAC4735,GP,F,18,U,GT3,T,2,1,services,other,reputation,mother,5th to 9th grade
+STU-55594F85,GP,F,17,U,LE3,A,2,1,other,other,course,mother,5th to 9th grade
+STU-D2A6279B,GP,M,16,U,GT3,T,2,1,at_home,other,course,mother,5th to 9th grade
+STU-F521A15A,GP,F,16,U,GT3,A,2,2,other,other,home,mother,5th to 9th grade
+STU-6722A298,GP,F,16,R,GT3,T,1,1,at_home,other,course,mother,Primary (4th grade)
+STU-9892CC6F,GP,M,18,U,LE3,T,3,1,services,services,course,mother,Secondary Education
+STU-E0506018,GP,F,18,U,GT3,A,3,2,other,services,course,other,Secondary Education
+STU-A6A23E79,GP,F,16,R,GT3,T,1,1,other,services,reputation,mother,Primary (4th grade)
+STU-33234FC4,GP,F,15,R,GT3,T,1,1,other,other,course,mother,Primary (4th grade)
+STU-54BC9657,GP,F,15,U,GT3,A,3,3,services,services,home,mother,Secondary Education
+STU-DB604946,GP,F,15,U,LE3,A,2,1,at_home,other,home,mother,5th to 9th grade
+STU-188F7051,GP,F,15,U,GT3,T,1,2,at_home,services,course,father,5th to 9th grade
+STU-7ADC1AE2,GP,M,16,U,LE3,T,1,2,health,services,course,mother,5th to 9th grade
+STU-D470E0BE,GP,M,17,R,GT3,T,3,2,other,other,course,mother,Secondary Education
+STU-D2646745,GP,M,15,U,LE3,T,1,2,other,other,course,mother,5th to 9th grade
+STU-B361A933,GP,M,16,U,GT3,T,1,3,at_home,services,course,father,Secondary Education
+STU-C94A4718,GP,M,17,U,GT3,T,3,2,services,services,course,mother,Secondary Education
+STU-01490824,GP,F,16,U,GT3,A,4,1,other,other,home,mother,Higher Education
+STU-72DD8E6B,GP,F,18,U,LE3,A,2,4,services,other,course,mother,Higher Education
+STU-86199ADA,GP,F,18,U,LE3,T,2,2,at_home,services,course,mother,5th to 9th grade
+STU-AD844083,GP,F,18,U,GT3,T,3,3,other,other,course,mother,Secondary Education
+STU-11DB36E9,GP,M,18,U,GT3,T,2,2,other,at_home,course,other,5th to 9th grade
+STU-20D8D327,GP,M,17,U,GT3,T,4,4,teacher,teacher,course,mother,Higher Education
+STU-49D51390,GP,F,17,U,GT3,T,3,2,other,other,course,father,Secondary Education
+STU-17E7181C,GP,F,17,U,LE3,T,1,1,at_home,at_home,course,mother,Primary (4th grade)
+STU-239D2E0B,GP,F,16,U,GT3,T,1,2,other,other,course,mother,5th to 9th grade
+STU-63C63F20,GP,F,17,R,LE3,A,1,4,other,other,course,other,Higher Education
+STU-85DCA321,GP,F,17,U,LE3,A,2,2,other,other,home,mother,5th to 9th grade
+STU-5BE9B4F0,GP,F,17,R,LE3,T,1,1,at_home,other,course,mother,Primary (4th grade)
+STU-CBE2D635,GP,F,17,U,LE3,A,4,2,teacher,other,course,mother,Higher Education
+STU-2066BAC3,GP,M,17,R,GT3,T,1,1,other,other,home,father,Primary (4th grade)
+STU-9B9DBF20,GP,F,17,U,GT3,T,3,3,services,other,home,mother,Secondary Education
+STU-11FFB57A,GP,F,17,U,GT3,T,1,1,at_home,other,course,mother,Primary (4th grade)
+STU-D5DDCD52,GP,F,17,U,GT3,T,1,1,other,services,course,father,Primary (4th grade)
+STU-D58D207B,GP,F,18,U,LE3,A,2,1,other,other,course,mother,5th to 9th grade
+STU-9954BC01,GP,F,19,U,GT3,T,2,2,services,services,home,mother,5th to 9th grade
+STU-22EA2ABB,GP,M,18,U,LE3,T,2,1,services,other,course,mother,5th to 9th grade
+STU-5E2556E5,GP,F,17,R,GT3,T,4,2,other,other,course,mother,Higher Education
+STU-B563DD6A,GP,F,18,U,LE3,T,1,1,other,at_home,home,mother,Primary (4th grade)
+STU-5FFA7709,GP,F,18,R,GT3,T,2,2,other,other,home,mother,5th to 9th grade
+STU-88BD4735,GP,M,17,R,GT3,T,2,2,other,services,other,mother,5th to 9th grade
+STU-02615315,GP,F,20,R,GT3,T,2,1,other,other,course,other,5th to 9th grade
+STU-0E548630,GP,M,17,U,GT3,T,2,2,other,other,home,father,5th to 9th grade
+STU-59987E38,GP,F,18,U,GT3,T,2,1,other,other,home,mother,5th to 9th grade
+STU-98611A09,GP,F,17,U,GT3,T,2,2,other,services,reputation,father,5th to 9th grade
+STU-4851F48F,GP,F,19,R,GT3,T,3,2,services,services,reputation,father,Secondary Education
+STU-F2F16061,GP,M,18,U,GT3,T,1,2,at_home,other,home,other,5th to 9th grade
+STU-306CA010,GP,F,18,U,GT3,T,2,1,other,other,reputation,mother,5th to 9th grade
+STU-461043E7,GP,F,17,R,GT3,T,4,4,services,services,reputation,mother,Higher Education
+STU-AC0A48D6,GP,M,19,R,LE3,T,2,1,at_home,services,course,mother,5th to 9th grade
+STU-F8277073,GP,F,18,U,GT3,T,1,4,other,teacher,home,mother,Higher Education
+STU-05FD959E,GP,F,17,U,GT3,T,2,3,other,other,course,father,Secondary Education
+STU-4FB07A05,GP,F,17,R,GT3,T,4,4,teacher,teacher,course,mother,Higher Education
+STU-734355E2,GP,F,18,U,LE3,T,4,3,health,services,course,mother,Higher Education
+STU-1474FDBD,GP,F,18,U,GT3,T,3,3,at_home,other,course,father,Secondary Education
+STU-E992517F,GP,M,19,U,GT3,T,4,2,health,other,course,mother,Higher Education
+STU-0320C003,GP,F,18,U,GT3,T,3,4,other,other,course,mother,Higher Education
+STU-69307B4A,GP,F,17,U,GT3,T,4,4,health,health,course,mother,Higher Education
+STU-C46B1609,GP,F,17,U,LE3,A,3,3,services,other,home,mother,Secondary Education
+STU-ED831F38,GP,F,17,U,LE3,T,2,1,other,other,home,father,5th to 9th grade
+STU-265C110E,GP,M,18,U,LE3,T,4,4,other,other,reputation,father,Higher Education
+STU-65703DF3,GP,F,19,U,GT3,T,1,1,other,other,course,other,Primary (4th grade)
+STU-A0976536,GP,F,19,U,LE3,A,1,1,other,other,course,other,Primary (4th grade)
+STU-796A09C0,GP,F,18,U,GT3,T,2,2,other,other,course,mother,5th to 9th grade
+STU-0953A36D,GP,F,17,U,GT3,T,3,3,at_home,other,course,mother,Secondary Education
+STU-B41C341C,GP,M,19,R,GT3,T,3,2,at_home,services,home,other,Secondary Education
+STU-DF76F2BF,GP,F,18,U,GT3,T,2,2,at_home,other,course,mother,5th to 9th grade
+STU-45E8C5A5,GP,M,18,U,GT3,T,2,2,other,other,reputation,mother,5th to 9th grade
+STU-018130B7,GP,F,17,U,GT3,T,2,1,services,other,course,mother,5th to 9th grade
+STU-56BC7B44,GP,F,17,U,GT3,T,2,1,services,other,reputation,mother,5th to 9th grade
+STU-444618D6,GP,F,19,U,LE3,A,2,3,at_home,other,home,other,Secondary Education
+STU-4AABC67D,GP,F,17,U,GT3,T,3,1,other,at_home,home,mother,Secondary Education
+STU-F7289B8A,GP,F,21,U,LE3,T,4,4,other,other,reputation,other,Higher Education
+STU-EB0FB275,GP,M,18,U,LE3,T,2,2,services,services,reputation,mother,5th to 9th grade
+STU-8EDE5BB6,GP,M,18,U,LE3,A,3,4,other,other,reputation,other,Higher Education
+STU-779DE84C,GP,F,17,U,GT3,T,2,2,services,services,reputation,mother,5th to 9th grade
+STU-35378DB8,GP,M,17,U,LE3,A,4,4,health,other,reputation,mother,Higher Education
+STU-B7E2FA44,GP,F,18,U,LE3,T,4,2,teacher,other,course,mother,Higher Education
+STU-D0168012,GP,M,21,R,LE3,T,1,1,at_home,other,course,other,Primary (4th grade)
+STU-729F0FE8,GP,F,20,R,GT3,T,1,1,other,other,reputation,other,Primary (4th grade)
+STU-B7A13DE6,GP,F,19,U,GT3,T,4,4,teacher,other,home,other,Higher Education
+STU-6BB212A4,GP,M,17,U,LE3,A,3,2,other,other,reputation,mother,Secondary Education
+STU-6B2A4A12,GP,F,18,U,GT3,T,3,2,at_home,other,reputation,father,Secondary Education
+STU-EB8FDD92,GP,M,18,R,GT3,T,2,3,other,services,reputation,father,Secondary Education
+STU-DBAFA35C,GP,M,19,U,GT3,T,2,1,other,other,reputation,mother,5th to 9th grade
+STU-CF21692E,GP,F,18,U,LE3,A,2,2,services,other,reputation,mother,5th to 9th grade
+STU-E68AA01E,GP,F,20,U,GT3,T,1,0,other,other,reputation,mother,Primary (4th grade)
+STU-BA407181,GP,F,18,U,GT3,T,3,2,services,other,home,mother,Secondary Education
+STU-3D74E024,MS,F,16,U,GT3,T,1,3,at_home,other,other,father,Secondary Education
+STU-B9F6153F,MS,F,16,R,GT3,T,2,2,other,other,course,mother,5th to 9th grade
+STU-B994B8F8,MS,F,15,R,GT3,T,1,1,at_home,services,other,mother,Primary (4th grade)
+STU-D584C567,MS,F,15,R,GT3,T,3,3,at_home,other,course,mother,Secondary Education
+STU-2EFC7C13,MS,F,16,R,GT3,T,2,3,at_home,services,course,mother,Secondary Education
+STU-CA6DB392,MS,F,15,R,LE3,T,2,1,at_home,other,home,mother,5th to 9th grade
+STU-0D29ACE6,MS,M,16,R,LE3,A,4,4,at_home,other,home,mother,Higher Education
+STU-EF9CE1E9,MS,M,16,U,GT3,A,1,2,other,other,other,mother,5th to 9th grade
+STU-C7925316,MS,F,17,R,GT3,T,3,2,at_home,other,course,father,Secondary Education
+STU-B873EF38,MS,F,17,R,GT3,T,1,1,other,other,other,father,Primary (4th grade)
+STU-8FDA26FD,MS,F,15,R,GT3,T,4,4,teacher,other,course,mother,Higher Education
+STU-B6595762,MS,F,16,U,LE3,A,2,2,at_home,other,reputation,mother,5th to 9th grade
+STU-85CB0B70,MS,F,15,R,LE3,T,1,1,at_home,services,reputation,father,Primary (4th grade)
+STU-9D5086D0,MS,F,15,R,LE3,T,1,1,other,services,course,mother,Primary (4th grade)
+STU-24817F4F,MS,F,16,R,GT3,T,0,2,other,other,other,mother,5th to 9th grade
+STU-0138C512,MS,F,17,R,GT3,T,2,3,other,other,course,mother,Secondary Education
+STU-7C076817,MS,F,15,R,GT3,T,3,3,other,services,course,father,Secondary Education
+STU-E7EEA036,MS,M,16,U,GT3,T,1,1,at_home,services,home,mother,Primary (4th grade)
+STU-436FB92E,MS,M,17,U,GT3,T,1,1,other,other,home,mother,Primary (4th grade)
+STU-AC17C12B,MS,M,15,R,LE3,T,4,1,health,services,reputation,father,Higher Education
+STU-1843ACC9,MS,M,16,R,GT3,T,3,4,other,health,other,mother,Higher Education
+STU-D7E269E2,MS,M,15,R,GT3,T,1,1,other,other,course,mother,Primary (4th grade)
+STU-2FC18DC6,MS,M,15,U,LE3,T,3,3,at_home,at_home,reputation,father,Secondary Education
+STU-447A2FD5,MS,M,17,R,GT3,T,2,1,other,other,other,mother,5th to 9th grade
+STU-9324F5A8,MS,F,16,R,GT3,T,4,4,teacher,teacher,course,mother,Higher Education
+STU-3F252A0B,MS,F,15,R,GT3,T,1,2,other,services,course,mother,5th to 9th grade
+STU-EB871326,MS,F,16,R,GT3,T,2,3,other,services,course,mother,Secondary Education
+STU-157F0787,MS,M,16,R,GT3,T,1,2,other,other,course,father,5th to 9th grade
+STU-CDFC84CC,MS,F,16,U,GT3,T,1,2,other,services,course,mother,5th to 9th grade
+STU-8549017C,MS,F,15,U,GT3,T,2,1,at_home,other,home,mother,5th to 9th grade
+STU-BE625528,MS,F,16,U,GT3,T,1,1,at_home,other,course,father,Primary (4th grade)
+STU-76521A69,MS,M,17,R,LE3,T,1,2,at_home,services,reputation,mother,5th to 9th grade
+STU-C22EBB74,MS,F,16,R,GT3,T,1,1,other,other,home,father,Primary (4th grade)
+STU-7DBAAD61,MS,F,16,R,GT3,T,1,1,at_home,other,other,father,Primary (4th grade)
+STU-2EE22B8A,MS,F,15,R,GT3,T,1,1,at_home,other,home,father,Primary (4th grade)
+STU-B36D67C7,MS,F,16,R,GT3,T,1,1,at_home,other,other,mother,Primary (4th grade)
+STU-7BE533FA,MS,F,15,R,GT3,T,1,1,at_home,at_home,course,father,Primary (4th grade)
+STU-81FA5228,MS,F,15,R,LE3,T,2,2,other,other,other,father,5th to 9th grade
+STU-E1DC7CDD,MS,M,16,R,GT3,T,1,1,at_home,other,other,father,Primary (4th grade)
+STU-03CF678A,MS,F,18,U,GT3,T,1,2,other,other,course,father,5th to 9th grade
+STU-E934E2BE,MS,M,15,U,GT3,T,3,1,other,services,home,mother,Secondary Education
+STU-8160969F,MS,F,16,R,GT3,T,2,2,other,services,course,father,5th to 9th grade
+STU-1DC34200,MS,M,15,U,GT3,T,2,2,health,other,reputation,mother,5th to 9th grade
+STU-0209E917,MS,M,16,U,GT3,T,4,4,other,teacher,course,father,Higher Education
+STU-3571D449,MS,F,15,R,GT3,T,3,3,services,other,reputation,mother,Secondary Education
+STU-FAFE17A5,MS,F,16,R,GT3,T,2,2,at_home,other,course,mother,5th to 9th grade
+STU-79E49F84,MS,F,16,R,LE3,T,2,2,other,other,home,father,5th to 9th grade
+STU-9219CB18,MS,M,16,U,LE3,T,2,1,at_home,services,course,mother,5th to 9th grade
+STU-62B79FAE,MS,M,15,R,LE3,T,1,3,at_home,other,reputation,father,Secondary Education
+STU-9BBCFDB0,MS,F,15,U,GT3,T,2,2,other,services,course,mother,5th to 9th grade
+STU-4514A1B9,MS,F,16,R,LE3,T,2,1,other,other,home,mother,5th to 9th grade
+STU-D20414C0,MS,M,15,U,GT3,T,3,3,services,services,course,father,Secondary Education
+STU-0D566072,MS,F,16,R,GT3,T,1,1,at_home,other,course,father,Primary (4th grade)
+STU-78EF6D94,MS,F,17,U,GT3,T,2,2,other,at_home,course,mother,5th to 9th grade
+STU-E93A2B85,MS,F,19,U,GT3,T,2,3,at_home,services,course,other,Secondary Education
+STU-6C286211,MS,F,17,R,GT3,T,2,1,at_home,other,course,mother,5th to 9th grade
+STU-4D200D13,MS,F,15,R,LE3,T,1,1,at_home,other,course,mother,Primary (4th grade)
+STU-5F670B53,MS,F,16,U,LE3,A,2,2,other,other,home,mother,5th to 9th grade
+STU-5D9072D7,MS,F,17,R,GT3,T,2,2,at_home,other,course,mother,5th to 9th grade
+STU-BDA4BEC1,MS,F,16,U,GT3,T,2,2,other,services,course,father,5th to 9th grade
+STU-580CE59D,MS,F,18,R,LE3,A,3,2,other,other,course,other,Secondary Education
+STU-E42AF51B,MS,F,19,U,GT3,T,1,1,at_home,services,course,mother,Primary (4th grade)
+STU-7EEFAF9D,MS,M,18,R,GT3,T,1,1,other,other,home,mother,Primary (4th grade)
+STU-DAA46F94,MS,F,18,R,GT3,T,1,1,at_home,at_home,course,mother,Primary (4th grade)
+STU-A9E6CB46,MS,F,19,U,GT3,T,1,1,other,other,course,other,Primary (4th grade)
+STU-BBE60AC9,MS,F,16,R,GT3,A,2,2,health,other,course,mother,5th to 9th grade
+STU-D9DFF858,MS,F,17,U,GT3,T,0,1,other,at_home,course,father,Primary (4th grade)
+STU-82AFF7BA,MS,F,16,R,LE3,T,1,2,at_home,other,course,mother,5th to 9th grade
+STU-68C738CA,MS,F,16,U,GT3,T,3,3,other,other,reputation,mother,Secondary Education
+STU-34F6B20D,MS,F,16,R,LE3,T,1,1,services,services,home,mother,Primary (4th grade)
+STU-DB2F25A3,MS,M,17,U,GT3,T,3,3,services,at_home,course,mother,Secondary Education
+STU-B9DED09A,MS,F,16,U,GT3,T,2,1,other,services,course,mother,5th to 9th grade
+STU-64DF58A0,MS,F,16,U,GT3,T,2,2,services,other,course,mother,5th to 9th grade
+STU-16B51A22,MS,M,17,U,GT3,T,1,2,other,other,course,father,5th to 9th grade
+STU-7CFBF951,MS,M,16,U,LE3,T,4,3,other,other,course,father,Higher Education
+STU-AE51895D,MS,M,17,R,LE3,T,2,2,services,services,other,mother,5th to 9th grade
+STU-9EEF833D,MS,F,16,U,GT3,T,1,1,other,other,course,other,Primary (4th grade)
+STU-268B85CE,MS,F,19,U,LE3,T,2,2,other,other,home,mother,5th to 9th grade
+STU-250663B9,MS,F,17,R,GT3,T,1,1,at_home,other,reputation,mother,Primary (4th grade)
+STU-812E7002,MS,F,20,U,GT3,T,3,3,at_home,services,other,mother,Secondary Education
+STU-DFCB0802,MS,F,17,U,LE3,T,1,1,other,services,course,father,Primary (4th grade)
+STU-15058A7B,MS,M,17,R,GT3,T,2,2,other,other,course,mother,5th to 9th grade
+STU-640F0E5A,MS,F,16,R,LE3,T,1,1,at_home,other,course,father,Primary (4th grade)
+STU-28887303,MS,F,17,R,GT3,T,2,2,other,other,reputation,mother,5th to 9th grade
+STU-19F7B23F,MS,F,17,U,GT3,A,1,0,other,other,other,mother,Primary (4th grade)
+STU-B1BF1E1F,MS,F,18,R,GT3,T,1,1,at_home,other,other,mother,Primary (4th grade)
+STU-ACEA39F2,MS,F,16,U,GT3,T,3,1,other,other,course,mother,Secondary Education
+STU-30DBE9A6,MS,F,16,U,GT3,T,3,2,services,at_home,course,mother,Secondary Education
+STU-1F3D2C70,MS,F,18,U,LE3,T,1,1,other,at_home,reputation,mother,Primary (4th grade)
+STU-04EED6FE,MS,F,16,R,GT3,T,4,4,health,teacher,reputation,father,Higher Education
+STU-C86E0A3A,MS,F,16,R,LE3,T,1,2,other,other,reputation,mother,5th to 9th grade
+STU-535B04CA,MS,F,18,U,GT3,A,2,4,other,services,reputation,father,Higher Education
+STU-B47C2670,MS,M,16,R,GT3,T,2,1,other,services,reputation,mother,5th to 9th grade
+STU-AAF0E6C1,MS,F,16,U,LE3,T,1,1,at_home,other,other,mother,Primary (4th grade)
+STU-02EAF67D,MS,F,16,R,GT3,T,2,3,at_home,services,other,mother,Secondary Education
+STU-274DFEB7,MS,F,16,U,GT3,T,4,4,health,health,course,mother,Higher Education
+STU-87DF454F,MS,M,18,U,LE3,T,4,4,at_home,health,home,mother,Higher Education
+STU-AEFA37D8,MS,F,16,R,LE3,T,3,4,at_home,other,other,mother,Higher Education
+STU-6398DE35,MS,M,17,U,LE3,T,4,4,other,services,home,mother,Higher Education
+STU-92C4B18E,MS,F,17,R,GT3,T,4,1,other,other,other,mother,Higher Education
+STU-34BAAB81,MS,M,16,U,LE3,T,2,2,services,services,other,mother,5th to 9th grade
+STU-E705E896,MS,F,17,R,GT3,T,2,2,at_home,other,other,mother,5th to 9th grade
+STU-CF91ABC8,MS,F,16,U,LE3,T,4,4,services,services,other,father,Higher Education
+STU-C339223C,MS,M,17,U,GT3,T,3,3,services,services,home,mother,Secondary Education
+STU-F58FE4FC,MS,M,17,U,GT3,T,1,1,at_home,services,other,mother,Primary (4th grade)
+STU-3F44C94B,MS,M,16,U,GT3,T,2,1,health,services,other,mother,5th to 9th grade
+STU-0ED8FF15,MS,F,16,U,LE3,T,2,1,other,services,other,mother,5th to 9th grade
+STU-1A1B22A5,MS,M,16,U,LE3,T,4,4,teacher,health,other,father,Higher Education
+STU-C1D171B9,MS,M,15,R,GT3,T,1,2,other,services,course,mother,5th to 9th grade
+STU-5DE1A056,MS,M,15,U,LE3,A,2,2,other,other,reputation,mother,5th to 9th grade
+STU-EFE40CED,MS,M,15,U,LE3,A,2,1,services,services,course,mother,5th to 9th grade
+STU-F492E836,MS,F,16,R,LE3,T,2,2,other,other,course,mother,5th to 9th grade
+STU-09444AC0,MS,F,16,U,LE3,T,4,1,other,other,home,mother,Higher Education
+STU-9FEF2670,MS,F,17,U,GT3,T,3,2,at_home,other,home,mother,Secondary Education
+STU-60B96BEA,MS,F,17,R,GT3,T,2,2,other,other,other,mother,5th to 9th grade
+STU-A3548CD3,MS,F,16,U,GT3,T,4,4,teacher,services,course,mother,Higher Education
+STU-B4551B6B,MS,M,17,R,GT3,T,4,4,health,other,course,father,Higher Education
+STU-8071193F,MS,M,17,R,LE3,T,1,3,other,other,course,father,Secondary Education
+STU-6763F4BA,MS,M,17,U,GT3,T,3,4,services,other,other,mother,Higher Education
+STU-AA98CDC3,MS,F,17,U,GT3,T,4,4,health,health,course,father,Higher Education
+STU-84F84FC1,MS,M,16,R,LE3,T,4,1,other,at_home,other,father,Higher Education
+STU-4467A8AC,MS,F,17,U,GT3,A,1,1,at_home,at_home,other,mother,Primary (4th grade)
+STU-97C36D85,MS,F,17,R,GT3,T,4,2,other,other,course,mother,Higher Education
+STU-1CEEE517,MS,M,16,U,LE3,A,2,2,other,services,course,father,5th to 9th grade
+STU-4FBD7927,MS,M,17,U,GT3,T,3,2,other,other,other,father,Secondary Education
+STU-7FF83C1B,MS,M,19,U,GT3,T,1,1,other,other,other,mother,Primary (4th grade)
+STU-D3E0EA2C,MS,M,17,U,LE3,A,1,0,other,other,home,mother,Primary (4th grade)
+STU-1D868300,MS,F,17,R,GT3,T,1,1,at_home,at_home,course,father,Primary (4th grade)
+STU-847F9AC4,MS,F,16,R,GT3,T,1,2,other,other,home,father,5th to 9th grade
+STU-7AB450F2,MS,M,16,R,LE3,T,1,2,other,at_home,course,mother,5th to 9th grade
+STU-AEF028CF,MS,F,17,R,GT3,T,3,1,other,other,course,mother,Secondary Education
+STU-F4C32F36,MS,M,17,R,GT3,T,2,2,other,other,course,mother,5th to 9th grade
+STU-C21AB088,MS,M,18,R,GT3,T,1,0,at_home,at_home,course,other,Primary (4th grade)
+STU-A5B64220,MS,M,17,R,GT3,T,1,1,other,services,course,mother,Primary (4th grade)
+STU-23DBAE70,MS,M,18,U,LE3,T,1,1,at_home,at_home,course,mother,Primary (4th grade)
+STU-854F9550,MS,F,16,R,LE3,T,2,2,other,services,course,father,5th to 9th grade
+STU-9E67A8BE,MS,M,17,U,GT3,T,2,2,other,other,course,mother,5th to 9th grade
+STU-3C629DC8,MS,M,16,R,GT3,T,3,2,services,other,course,father,Secondary Education
+STU-9C432817,MS,M,16,R,LE3,T,1,1,at_home,other,course,mother,Primary (4th grade)
+STU-5C5D7991,MS,M,18,R,GT3,T,1,1,services,other,course,other,Primary (4th grade)
+STU-5313A3E8,MS,M,18,R,GT3,T,3,2,services,other,course,mother,Secondary Education
+STU-9747277A,MS,M,19,U,GT3,T,3,2,at_home,services,course,mother,Secondary Education
+STU-05D87EBE,MS,M,18,U,GT3,T,3,3,at_home,at_home,course,mother,Secondary Education
+STU-053D05C3,MS,M,16,R,GT3,T,2,2,services,services,course,mother,5th to 9th grade
+STU-1CA4436A,MS,M,19,U,GT3,T,2,1,at_home,other,course,other,5th to 9th grade
+STU-5E2B4E67,MS,F,16,U,GT3,A,3,2,services,at_home,course,mother,Secondary Education
+STU-77BC2052,MS,F,17,U,GT3,T,1,1,other,at_home,course,mother,Primary (4th grade)
+STU-784F5418,MS,M,20,R,GT3,T,1,1,other,other,course,other,Primary (4th grade)
+STU-80AB0632,MS,F,18,R,GT3,A,4,3,services,services,course,mother,Higher Education
+STU-7CDB5286,MS,F,18,U,GT3,A,1,2,at_home,other,course,mother,5th to 9th grade
+STU-9A93F702,MS,F,19,U,LE3,A,1,1,at_home,other,course,mother,Primary (4th grade)
+STU-5861B90C,MS,F,18,R,GT3,T,2,2,other,other,other,mother,5th to 9th grade
+STU-EE89839B,MS,F,17,R,GT3,T,0,0,at_home,other,course,mother,None
+STU-9581BFE7,MS,F,17,R,LE3,A,3,1,other,at_home,course,other,Secondary Education
+STU-351B6849,MS,F,17,U,GT3,T,4,2,teacher,services,home,mother,Higher Education
+STU-3667B78F,MS,F,18,R,LE3,T,2,2,services,services,course,mother,5th to 9th grade
+STU-0AA71C46,MS,F,17,U,GT3,T,4,1,health,at_home,course,mother,Higher Education
+STU-DE9BC1EC,MS,F,17,U,LE3,T,1,2,at_home,other,course,father,5th to 9th grade
+STU-043B6EBC,MS,F,18,U,GT3,T,2,2,services,at_home,reputation,father,5th to 9th grade
+STU-5897478C,MS,F,17,U,GT3,T,3,3,services,services,course,mother,Secondary Education
+STU-9C32EEB7,MS,F,18,U,LE3,A,1,2,at_home,other,reputation,mother,5th to 9th grade
+STU-10A807B6,MS,F,18,U,GT3,T,4,4,teacher,teacher,reputation,mother,Higher Education
+STU-0EA9DAA0,MS,M,18,U,LE3,T,4,4,services,other,reputation,mother,Higher Education
+STU-28EA8C2E,MS,F,17,U,GT3,T,4,2,other,other,course,mother,Higher Education
+STU-6E3FC053,MS,F,18,R,GT3,T,2,2,at_home,other,course,mother,5th to 9th grade
+STU-CC9A0529,MS,M,18,U,LE3,T,1,2,at_home,services,home,mother,5th to 9th grade
+STU-FCAFCAB9,MS,M,18,R,GT3,T,4,4,at_home,services,other,mother,Higher Education
+STU-997231E8,MS,M,17,R,GT3,T,1,1,other,services,other,father,Primary (4th grade)
+STU-F8B506FB,MS,F,18,U,GT3,T,2,2,other,other,course,mother,5th to 9th grade
+STU-24D831E2,MS,F,18,U,LE3,T,2,2,services,services,course,father,5th to 9th grade
+STU-5573914D,MS,F,18,R,LE3,A,4,2,teacher,other,reputation,mother,Higher Education
+STU-4535D2BE,MS,F,18,U,GT3,T,1,1,at_home,services,course,mother,Primary (4th grade)
+STU-12458BB7,MS,F,19,U,GT3,T,1,1,at_home,services,other,father,Primary (4th grade)
+STU-1402D3DD,MS,F,17,U,GT3,T,4,2,teacher,other,course,father,Higher Education
+STU-38F4ECAE,MS,F,17,R,LE3,A,2,1,services,other,reputation,mother,5th to 9th grade
+STU-A2A9BEBF,MS,F,18,U,LE3,A,1,1,at_home,services,course,mother,Primary (4th grade)
+STU-FDBFB6A3,MS,F,18,U,GT3,T,1,2,at_home,at_home,course,father,5th to 9th grade
+STU-8904D551,MS,F,19,R,GT3,A,1,1,at_home,at_home,course,other,Primary (4th grade)
+STU-1E3B7642,MS,F,18,R,GT3,T,2,2,services,other,home,mother,5th to 9th grade
+STU-09B1F892,MS,F,18,R,LE3,A,1,2,at_home,other,course,mother,5th to 9th grade
+STU-0D90ABEE,MS,F,19,R,GT3,T,1,1,at_home,other,course,other,Primary (4th grade)
+STU-AD83CD91,MS,F,17,U,GT3,T,4,3,teacher,other,other,mother,Higher Education
