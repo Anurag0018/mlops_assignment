@@ -1,0 +1,23 @@
+artifact_path: file:C:/Users/DELL/Desktop/test/mlops_assignment/mlruns/1/models/m-b4c9ab749d194b3bacb182fac3426f65/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.12.3
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.5.0
+    skops_trusted_types: null
+mlflow_version: 3.17.1
+model_id: m-b4c9ab749d194b3bacb182fac3426f65
+model_size_bytes: 9753
+model_uuid: m-b4c9ab749d194b3bacb182fac3426f65
+prompts: null
+run_id: 6f10cb8f7a3d4e1e869e0967f163bb3a
+utc_time_created: '2026-10-14 15:34:49.246501'

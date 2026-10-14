@@ -36,6 +36,27 @@ def setup_mlflow(
     mlflow.set_tracking_uri(uri)
     logger.info(f"MLflow Tracking URI set to: {uri}")
 
+    # Ensure SQLite experiment artifact_location points to local filesystem if invalid
+    if uri.startswith("sqlite:///"):
+        try:
+            db_path = uri.replace("sqlite:///", "")
+            if os.path.exists(db_path):
+                import sqlite3
+                conn = sqlite3.connect(db_path)
+                c = conn.cursor()
+                for row in c.execute("SELECT experiment_id, artifact_location FROM experiments").fetchall():
+                    exp_id, art_loc = row[0], row[1]
+                    if art_loc and art_loc.startswith("file:"):
+                        raw_path = art_loc[5:]
+                        drive = os.path.splitdrive(raw_path)[0]
+                        if (drive and not os.path.exists(drive + "\\")) or not os.path.exists(os.path.dirname(raw_path)):
+                            local_art = f"file:{(PROJECT_ROOT / 'mlruns' / str(exp_id)).as_posix()}"
+                            c.execute("UPDATE experiments SET artifact_location = ? WHERE experiment_id = ?", (local_art, exp_id))
+                conn.commit()
+                conn.close()
+        except Exception as e:
+            logger.debug(f"MLflow artifact location check: {e}")
+
     mlflow.set_experiment(experiment_name)
     logger.info(f"MLflow Experiment set to: {experiment_name}")
     return uri

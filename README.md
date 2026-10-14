@@ -7,7 +7,15 @@ This project implements an enterprise-grade, end-to-end **Data Engineering and M
 - **Part 1 — Data Engineering Foundation:** Automated ingestion, multi-stage schema validation, quarantine logging, relational PostgreSQL modeling, analytical data mart creation, Airflow ETL orchestration, and executive Streamlit analytical dashboards.
 - **Part 2 — Production MLOps Lifecycle:** Leak-free feature pipelines, multi-model benchmarking (Logistic Regression, Random Forest, XGBoost), MLflow experiment tracking, model registry governance, FastAPI prediction microservice, Docker containerization, Population Stability Index (PSI) drift monitoring, and champion-vs-challenger automated retraining loops.
 
+### 🌐 Live Cloud Deployment & Quick Links
+
+- **🚀 Live Interactive Streamlit App:** [https://mlopsassignment-sm7scsm4tgafclq2hegef9.streamlit.app/](https://mlopsassignment-sm7scsm4tgafclq2hegef9.streamlit.app/)
+- **📦 GitHub Repository:** [https://github.com/Riyan-ai-code/mlops_assignment_an](https://github.com/Riyan-ai-code/mlops_assignment_an)
+- **⚡ Local API Microservice:** `http://localhost:8000` (Swagger UI: `http://localhost:8000/docs`)
+- **📊 Local MLflow Tracking UI:** `http://localhost:5000`
+
 ---
+
 
 ## 1. Problem Statement
 
@@ -1031,12 +1039,17 @@ The Streamlit portal (`dashboard/app.py`) provides 7 comprehensive tabs:
   - Population Stability Index (PSI) feature drift table with health status indicators.
   - Documented model retraining policy and promotion rules.
 
-To run the dashboard:
+To run the dashboard locally:
 ```bash
 run_dashboard.bat
 # Or manually:
 streamlit run dashboard/app.py
 ```
+
+**🌐 Live Cloud Hosted App:**
+The portal is publicly accessible on Streamlit Community Cloud at:
+[https://mlopsassignment-sm7scsm4tgafclq2hegef9.streamlit.app/](https://mlopsassignment-sm7scsm4tgafclq2hegef9.streamlit.app/)
+
 
 ---
 
@@ -1096,6 +1109,26 @@ Test coverage includes:
 - [x] Documented model retraining loop with champion-vs-challenger promotion criteria.
 - [x] Comprehensive automated test suite (37 tests passing).
 - [x] GitHub Actions CI workflow (`.github/workflows/ci.yml`).
+- [x] Live interactive deployment on Streamlit Community Cloud ([https://mlopsassignment-sm7scsm4tgafclq2hegef9.streamlit.app/](https://mlopsassignment-sm7scsm4tgafclq2hegef9.streamlit.app/)).
+
+---
+
+### 20.11 Live Cloud Deployment & Cross-Platform Resilience
+
+#### 1. Streamlit Community Cloud Architecture
+- **Hosted Portal URL:** [https://mlopsassignment-sm7scsm4tgafclq2hegef9.streamlit.app/](https://mlopsassignment-sm7scsm4tgafclq2hegef9.streamlit.app/)
+- **Repository Source:** `https://github.com/Riyan-ai-code/mlops_assignment_an` (Branch: `master`, Entrypoint: `dashboard/app.py`)
+- **Runtime Environment:** Managed Python container automatically provisioned using `requirements.txt`.
+- **Integrated Model Artifacts:** Uses the serialized Champion XGBoost model (`models/best_model.joblib`), fitted `ColumnTransformer` (`models/preprocessor.joblib`), and baseline feature reference distributions (`data/reference/reference_features.parquet`) for real-time drift computation without requiring an external database cluster.
+- **SQLite Analytics Mart:** Automatically bootstraps using the local relational SQLite data mart (`student_performance.db` / `data/cleaned/student_analytics.csv`) ensuring zero cold-start failures.
+
+#### 2. Cross-Platform Environment Portability Fixes
+- **MLflow Tracking Portability:**
+  - Enhanced `src/tracking/mlflow_utils.py` with dynamic experiment artifact location resolution.
+  - Automatically heals any legacy absolute path bindings (such as machine-specific drives or paths) on clone, redirecting artifact repositories smoothly to `mlruns/<experiment_id>` in the active repository root.
+- **Python Runtime Compatibility:**
+  - Fully verified across Python 3.10, 3.11, and 3.12 environments.
+  - All 37 automated tests pass natively on both Windows and Linux CI environments.
 
 
 ---

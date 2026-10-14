@@ -1,7 +1,7 @@
 {
-  "registered_at": "2026-10-14T14:49:59.462061+00:00",
+  "registered_at": "2026-10-14T15:35:14.428745+00:00",
   "champion_model_name": "XGBoost Classifier",
-  "champion_run_id": "da714ed48f384507b4b5cffb4958705d",
+  "champion_run_id": "d0534217afeb420c964c50e1ef6a969e",
   "algorithm": "XGBClassifier",
   "model_version": "v1.0.0",
   "primary_metric": "f1_score",
@@ -43,7 +43,7 @@
   "candidate_comparisons": [
     {
       "model_name": "Logistic Regression (Baseline)",
-      "run_id": "95c72dbcaff9482f86cd7d66153f7955",
+      "run_id": "6f10cb8f7a3d4e1e869e0967f163bb3a",
       "val_f1": 0.7042,
       "val_recall": 0.7576,
       "val_precision": 0.6579,
@@ -55,7 +55,7 @@
     },
     {
       "model_name": "Random Forest Classifier",
-      "run_id": "6dcb4a5d71ff4b81b8a54293a37d627f",
+      "run_id": "42f0fecc66644b8ca91f571bcb6bacda",
       "val_f1": 0.7077,
       "val_recall": 0.697,
       "val_precision": 0.7188,
@@ -67,7 +67,7 @@
     },
     {
       "model_name": "XGBoost Classifier",
-      "run_id": "da714ed48f384507b4b5cffb4958705d",
+      "run_id": "d0534217afeb420c964c50e1ef6a969e",
       "val_f1": 0.7671,
       "val_recall": 0.8485,
       "val_precision": 0.7,
@@ -78,5 +78,5 @@
       "test_roc_auc": 0.922
     }
   ],
-  "artifact_path": "D:\\anura\\Documents\\mlops_project\\models\\best_model.joblib"
+  "artifact_path": "C:\\Users\\DELL\\Desktop\\test\\mlops_assignment\\models\\best_model.joblib"
 }
