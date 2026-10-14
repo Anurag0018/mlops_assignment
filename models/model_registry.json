@@ -1,7 +1,7 @@
 {
-  "registered_at": "2026-10-14T14:21:46.523646+00:00",
+  "registered_at": "2026-10-14T14:42:18.158480+00:00",
   "champion_model_name": "XGBoost Classifier",
-  "champion_run_id": "7499b238f59a4c35a19d52616f156061",
+  "champion_run_id": "4c1ac7f624b14bc48253765d66cf5f14",
   "algorithm": "XGBClassifier",
   "model_version": "v1.1.0",
   "primary_metric": "f1_score",
@@ -43,7 +43,7 @@
   "candidate_comparisons": [
     {
       "model_name": "Logistic Regression (Baseline)",
-      "run_id": "699cc126c2164c3da2854821d895d648",
+      "run_id": "2d1b12d91af54a1d821897022e9bac29",
       "val_f1": 0.7042,
       "val_recall": 0.7576,
       "val_precision": 0.6579,
@@ -55,7 +55,7 @@
     },
     {
       "model_name": "Random Forest Classifier",
-      "run_id": "9d1df659b9944d57bb2d07773af93649",
+      "run_id": "bb824e1fb35b40a885ed0e1827da442f",
       "val_f1": 0.7536,
       "val_recall": 0.7879,
       "val_precision": 0.7222,
@@ -67,7 +67,7 @@
     },
     {
       "model_name": "XGBoost Classifier",
-      "run_id": "7499b238f59a4c35a19d52616f156061",
+      "run_id": "4c1ac7f624b14bc48253765d66cf5f14",
       "val_f1": 0.7671,
       "val_recall": 0.8485,
       "val_precision": 0.7,
