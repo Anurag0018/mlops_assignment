@@ -1,0 +1,8 @@
+mlflow==3.17.1
+jaraco-collections==5.1.0
+numpy==1.26.4
+psutil==7.2.2
+pytest==9.1.1
+scikit-learn==1.5.0
+scipy==1.16.3
+skops==0.16.0
