@@ -1,9 +1,9 @@
 {
-  "registered_at": "2026-10-14T14:13:01.576630+00:00",
+  "registered_at": "2026-10-14T14:21:46.523646+00:00",
   "champion_model_name": "XGBoost Classifier",
-  "champion_run_id": "32c2e0dcd8204c8fad0fda4e030f1484",
+  "champion_run_id": "7499b238f59a4c35a19d52616f156061",
   "algorithm": "XGBClassifier",
-  "model_version": "v1.0.0",
+  "model_version": "v1.1.0",
   "primary_metric": "f1_score",
   "selection_rationale": "Selected based on highest validation F1-score to maximize coverage of at-risk students without generating excessive false intervention alerts.",
   "validation_metrics": {
@@ -43,7 +43,7 @@
   "candidate_comparisons": [
     {
       "model_name": "Logistic Regression (Baseline)",
-      "run_id": "f99220d0952d4f969fdcff9b9f2f6046",
+      "run_id": "699cc126c2164c3da2854821d895d648",
       "val_f1": 0.7042,
       "val_recall": 0.7576,
       "val_precision": 0.6579,
@@ -55,7 +55,7 @@
     },
     {
       "model_name": "Random Forest Classifier",
-      "run_id": "2d5a99a222b049aaafaacc6513847977",
+      "run_id": "9d1df659b9944d57bb2d07773af93649",
       "val_f1": 0.7536,
       "val_recall": 0.7879,
       "val_precision": 0.7222,
@@ -67,7 +67,7 @@
     },
     {
       "model_name": "XGBoost Classifier",
-      "run_id": "32c2e0dcd8204c8fad0fda4e030f1484",
+      "run_id": "7499b238f59a4c35a19d52616f156061",
       "val_f1": 0.7671,
       "val_recall": 0.8485,
       "val_precision": 0.7,
@@ -78,5 +78,8 @@
       "test_roc_auc": 0.922
     }
   ],
-  "artifact_path": "D:\\anura\\Documents\\mlops_project\\models\\best_model.joblib"
+  "artifact_path": "D:\\anura\\Documents\\mlops_project\\models\\best_model.joblib",
+  "promotion_status": "PROMOTED",
+  "promotion_rationale": "Challenger promoted (tie-breaker/fresh weights)! Validation F1 matched Champion (0.7671) trained on updated data distribution.",
+  "previous_version": "v1.0.0"
 }
