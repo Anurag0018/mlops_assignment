@@ -18,8 +18,6 @@ features:
     - attendance_rate
     - studytime
     - failures
-    - medu
-    - fedu
   categorical:
     - school
     - sex
@@ -28,8 +26,6 @@ features:
     - pstatus
     - mjob
     - fjob
-    - reason
-    - guardian
     - parent_education
     - study_time_category
     - subject

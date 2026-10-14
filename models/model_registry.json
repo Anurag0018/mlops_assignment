@@ -1,0 +1,82 @@
+{
+  "registered_at": "2026-10-14T13:32:53.772601+00:00",
+  "champion_model_name": "XGBoost Classifier",
+  "champion_run_id": "8ec9d4a49bb347b5a8dc5d7fe04848e9",
+  "algorithm": "XGBClassifier",
+  "model_version": "v1.0.0",
+  "primary_metric": "f1_score",
+  "selection_rationale": "Selected based on highest validation F1-score to maximize coverage of at-risk students without generating excessive false intervention alerts.",
+  "validation_metrics": {
+    "accuracy": 0.8896,
+    "precision": 0.7,
+    "recall": 0.8485,
+    "f1": 0.7671,
+    "true_negatives": 109,
+    "false_positives": 12,
+    "false_negatives": 5,
+    "true_positives": 28,
+    "roc_auc": 0.9329,
+    "pr_auc": 0.7651
+  },
+  "test_metrics": {
+    "accuracy": 0.8516,
+    "precision": 0.6279,
+    "recall": 0.7941,
+    "f1": 0.7013,
+    "true_negatives": 105,
+    "false_positives": 16,
+    "false_negatives": 7,
+    "true_positives": 27,
+    "roc_auc": 0.922,
+    "pr_auc": 0.7534
+  },
+  "hyperparameters": {
+    "model_type": "XGBClassifier",
+    "n_estimators": 120,
+    "max_depth": 4,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "scale_pos_weight": 3.64,
+    "random_state": 42
+  },
+  "candidate_comparisons": [
+    {
+      "model_name": "Logistic Regression (Baseline)",
+      "run_id": "bdbc6acbc1a44e028bb17379e066d797",
+      "val_f1": 0.7042,
+      "val_recall": 0.7576,
+      "val_precision": 0.6579,
+      "val_roc_auc": 0.9256,
+      "test_f1": 0.6914,
+      "test_recall": 0.8235,
+      "test_precision": 0.5957,
+      "test_roc_auc": 0.9409
+    },
+    {
+      "model_name": "Random Forest Classifier",
+      "run_id": "53d32fbe4bc54665981a4b278946ce61",
+      "val_f1": 0.7077,
+      "val_recall": 0.697,
+      "val_precision": 0.7188,
+      "val_roc_auc": 0.9276,
+      "test_f1": 0.6944,
+      "test_recall": 0.7353,
+      "test_precision": 0.6579,
+      "test_roc_auc": 0.9186
+    },
+    {
+      "model_name": "XGBoost Classifier",
+      "run_id": "8ec9d4a49bb347b5a8dc5d7fe04848e9",
+      "val_f1": 0.7671,
+      "val_recall": 0.8485,
+      "val_precision": 0.7,
+      "val_roc_auc": 0.9329,
+      "test_f1": 0.7013,
+      "test_recall": 0.7941,
+      "test_precision": 0.6279,
+      "test_roc_auc": 0.922
+    }
+  ],
+  "artifact_path": "D:\\anura\\Documents\\mlops_project\\models\\best_model.joblib"
+}

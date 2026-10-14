@@ -1,0 +1,181 @@
+{
+  "target": "failure_risk",
+  "input_features": [
+    "g1",
+    "age",
+    "absences",
+    "attendance_rate",
+    "studytime",
+    "failures",
+    "school",
+    "sex",
+    "address",
+    "famsize",
+    "pstatus",
+    "mjob",
+    "fjob",
+    "parent_education",
+    "study_time_category",
+    "subject"
+  ],
+  "numerical_features": {
+    "g1": {
+      "type": "float",
+      "min": 0.0,
+      "max": 19.0,
+      "mean": 11.2
+    },
+    "age": {
+      "type": "float",
+      "min": 15.0,
+      "max": 22.0,
+      "mean": 16.73
+    },
+    "absences": {
+      "type": "float",
+      "min": 0.0,
+      "max": 56.0,
+      "mean": 4.34
+    },
+    "attendance_rate": {
+      "type": "float",
+      "min": 39.78,
+      "max": 100.0,
+      "mean": 95.34
+    },
+    "studytime": {
+      "type": "float",
+      "min": 1.0,
+      "max": 4.0,
+      "mean": 1.99
+    },
+    "failures": {
+      "type": "float",
+      "min": 0.0,
+      "max": 3.0,
+      "mean": 0.26
+    }
+  },
+  "categorical_features": {
+    "school": {
+      "type": "categorical",
+      "allowed_categories": [
+        "GP",
+        "MS"
+      ]
+    },
+    "sex": {
+      "type": "categorical",
+      "allowed_categories": [
+        "F",
+        "M"
+      ]
+    },
+    "address": {
+      "type": "categorical",
+      "allowed_categories": [
+        "R",
+        "U"
+      ]
+    },
+    "famsize": {
+      "type": "categorical",
+      "allowed_categories": [
+        "GT3",
+        "LE3"
+      ]
+    },
+    "pstatus": {
+      "type": "categorical",
+      "allowed_categories": [
+        "A",
+        "T"
+      ]
+    },
+    "mjob": {
+      "type": "categorical",
+      "allowed_categories": [
+        "at_home",
+        "health",
+        "other",
+        "services",
+        "teacher"
+      ]
+    },
+    "fjob": {
+      "type": "categorical",
+      "allowed_categories": [
+        "at_home",
+        "health",
+        "other",
+        "services",
+        "teacher"
+      ]
+    },
+    "parent_education": {
+      "type": "categorical",
+      "allowed_categories": [
+        "5th to 9th grade",
+        "Higher Education",
+        "Primary (4th grade)",
+        "Secondary Education"
+      ]
+    },
+    "study_time_category": {
+      "type": "categorical",
+      "allowed_categories": [
+        "2 to 5 hours",
+        "5 to 10 hours",
+        "<2 hours",
+        ">10 hours"
+      ]
+    },
+    "subject": {
+      "type": "categorical",
+      "allowed_categories": [
+        "Mathematics",
+        "Portuguese"
+      ]
+    }
+  },
+  "transformed_feature_names": [
+    "g1",
+    "age",
+    "absences",
+    "attendance_rate",
+    "studytime",
+    "failures",
+    "school_GP",
+    "school_MS",
+    "sex_F",
+    "sex_M",
+    "address_R",
+    "address_U",
+    "famsize_GT3",
+    "famsize_LE3",
+    "pstatus_A",
+    "pstatus_T",
+    "mjob_at_home",
+    "mjob_health",
+    "mjob_other",
+    "mjob_services",
+    "mjob_teacher",
+    "fjob_at_home",
+    "fjob_health",
+    "fjob_other",
+    "fjob_services",
+    "fjob_teacher",
+    "parent_education_5th to 9th grade",
+    "parent_education_Higher Education",
+    "parent_education_Primary (4th grade)",
+    "parent_education_Secondary Education",
+    "parent_education_nan",
+    "study_time_category_2 to 5 hours",
+    "study_time_category_5 to 10 hours",
+    "study_time_category_<2 hours",
+    "study_time_category_>10 hours",
+    "subject_Mathematics",
+    "subject_Portuguese"
+  ],
+  "transformed_feature_count": 37
+}

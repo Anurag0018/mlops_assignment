@@ -40,8 +40,6 @@ NUMERICAL_FEATURES = [
     "attendance_rate",
     "studytime",
     "failures",
-    "medu",
-    "fedu",
 ]
 
 CATEGORICAL_FEATURES = [
@@ -52,8 +50,6 @@ CATEGORICAL_FEATURES = [
     "pstatus",
     "mjob",
     "fjob",
-    "reason",
-    "guardian",
     "parent_education",
     "study_time_category",
     "subject",

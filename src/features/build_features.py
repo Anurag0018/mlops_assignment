@@ -111,7 +111,7 @@ def extract_feature_metadata(df: pd.DataFrame, preprocessor: ColumnTransformer) 
     for col in CATEGORICAL_FEATURES:
         cat_meta[col] = {
             "type": "categorical",
-            "allowed_categories": sorted(df[col].astype(str).unique().tolist()),
+            "allowed_categories": sorted([str(x) for x in df[col].dropna().unique().tolist()]),
         }
 
     # Extract transformed feature names

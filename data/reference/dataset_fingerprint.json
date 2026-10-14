@@ -19,8 +19,6 @@
     "attendance_rate",
     "studytime",
     "failures",
-    "medu",
-    "fedu",
     "school",
     "sex",
     "address",
@@ -28,8 +26,6 @@
     "pstatus",
     "mjob",
     "fjob",
-    "reason",
-    "guardian",
     "parent_education",
     "study_time_category",
     "subject"
@@ -40,9 +36,7 @@
     "absences",
     "attendance_rate",
     "studytime",
-    "failures",
-    "medu",
-    "fedu"
+    "failures"
   ],
   "categorical_features": [
     "school",
@@ -52,8 +46,6 @@
     "pstatus",
     "mjob",
     "fjob",
-    "reason",
-    "guardian",
     "parent_education",
     "study_time_category",
     "subject"
