@@ -78,7 +78,7 @@ def test_transformation_pipeline_features(tmp_path):
     staging_file = tmp_path / "staging_sample.csv"
     pd.DataFrame(sample_data).to_csv(staging_file, index=False)
 
-    df_students, df_academic, df_analytics = transform_staging_data(staging_file)
+    df_students, df_academic, df_analytics = transform_staging_data(staging_file, output_dir=tmp_path)
 
     # Verify dimensional tables
     assert len(df_students) == 2

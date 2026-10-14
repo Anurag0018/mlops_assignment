@@ -1,0 +1,61 @@
+{
+  "dataset_name": "student_analytics.csv",
+  "sha256_checksum": "df8f639b94a8fcf6a294ba4b38fe65f0fdfc7c4b53f96b4347bc9f528c5b7dcc",
+  "total_records": 1028,
+  "total_columns": 25,
+  "target_definition": "failure_risk = 1 if final_grade (G3) < 10 else 0",
+  "class_distribution": {
+    "0_passing": 806,
+    "1_at_risk": 222
+  },
+  "class_proportions": {
+    "0_passing_pct": 78.4,
+    "1_at_risk_pct": 21.6
+  },
+  "all_input_features": [
+    "g1",
+    "age",
+    "absences",
+    "attendance_rate",
+    "studytime",
+    "failures",
+    "medu",
+    "fedu",
+    "school",
+    "sex",
+    "address",
+    "famsize",
+    "pstatus",
+    "mjob",
+    "fjob",
+    "reason",
+    "guardian",
+    "parent_education",
+    "study_time_category",
+    "subject"
+  ],
+  "numerical_features": [
+    "g1",
+    "age",
+    "absences",
+    "attendance_rate",
+    "studytime",
+    "failures",
+    "medu",
+    "fedu"
+  ],
+  "categorical_features": [
+    "school",
+    "sex",
+    "address",
+    "famsize",
+    "pstatus",
+    "mjob",
+    "fjob",
+    "reason",
+    "guardian",
+    "parent_education",
+    "study_time_category",
+    "subject"
+  ]
+}

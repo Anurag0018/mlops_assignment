@@ -22,7 +22,7 @@ Outputs saved to data/cleaned/:
 import sys
 import logging
 from pathlib import Path
-from typing import Dict, Any, Tuple
+from typing import Dict, Any, Tuple, Optional
 import pandas as pd
 import numpy as np
 

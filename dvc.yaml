@@ -1,0 +1,36 @@
+stages:
+  build_features:
+    cmd: python src/features/build_features.py
+    deps:
+      - data/cleaned/student_analytics.csv
+      - src/features/build_features.py
+      - src/common/config.py
+      - params.yaml
+    outs:
+      - models/preprocessor.joblib
+      - models/feature_metadata.json
+      - data/reference/reference_features.parquet
+      - data/reference/dataset_fingerprint.json
+
+  train_models:
+    cmd: python src/training/train.py
+    deps:
+      - models/preprocessor.joblib
+      - src/training/train.py
+      - src/tracking/mlflow_utils.py
+      - params.yaml
+    outs:
+      - models/best_model.joblib
+      - models/model_registry.json
+
+  evaluate_models:
+    cmd: python src/training/evaluate.py
+    deps:
+      - models/best_model.joblib
+      - src/training/evaluate.py
+      - params.yaml
+    outs:
+      - reports/model_comparison.json
+      - reports/confusion_matrix.png
+      - reports/roc_curves.png
+      - reports/feature_importance.png

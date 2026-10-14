@@ -1,0 +1,61 @@
+# MLOps Pipeline Parameters
+base:
+  project_name: student-performance-mlops
+  random_seed: 42
+
+data:
+  dataset_path: data/cleaned/student_analytics.csv
+  target_column: failure_risk
+  train_split: 0.70
+  val_split: 0.15
+  test_split: 0.15
+
+features:
+  numerical:
+    - g1
+    - age
+    - absences
+    - attendance_rate
+    - studytime
+    - failures
+    - medu
+    - fedu
+  categorical:
+    - school
+    - sex
+    - address
+    - famsize
+    - pstatus
+    - mjob
+    - fjob
+    - reason
+    - guardian
+    - parent_education
+    - study_time_category
+    - subject
+
+models:
+  logistic_regression:
+    C: 1.0
+    solver: lbfgs
+    max_iter: 1000
+    class_weight: balanced
+
+  random_forest:
+    n_estimators: 100
+    max_depth: 8
+    min_samples_split: 5
+    class_weight: balanced
+    random_state: 42
+
+  xgboost:
+    n_estimators: 100
+    max_depth: 4
+    learning_rate: 0.05
+    scale_pos_weight: 3.63
+    eval_metric: logloss
+    random_state: 42
+
+drift:
+  psi_threshold_stable: 0.10
+  psi_threshold_moderate: 0.20
