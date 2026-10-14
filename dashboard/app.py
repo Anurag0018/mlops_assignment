@@ -12,6 +12,8 @@ Production-grade educational analytics portal visualizing 5 comprehensive views:
 import sys
 import os
 from pathlib import Path
+import json
+import requests
 import pandas as pd
 import numpy as np
 import plotly.express as px
@@ -24,6 +26,17 @@ if str(BASE_DIR) not in sys.path:
     sys.path.insert(0, str(BASE_DIR))
 
 from src.database.load import query_analytics_data, get_db_engine
+from src.common.config import (
+    MODEL_REGISTRY_PATH,
+    REPORTS_DIR,
+    REFERENCE_FEATURES_PATH,
+    ALL_FEATURE_COLUMNS,
+)
+from api.schemas import StudentFeatures
+from api.services import ModelService
+from src.monitoring.drift import DriftDetector
+
+API_URL = os.getenv("API_URL", "http://localhost:8000")
 
 # -----------------------------------------------------------------------------
 # Streamlit Page Configuration
@@ -321,8 +334,8 @@ def main():
             <span>🎓</span> Student Performance & Dropout-Risk Platform
         </div>
         <div class="hero-subtitle">
-            Part 1: Production Data Engineering Pipeline integrating automated ingestion, multi-stage validation, 
-            relational dimensional storage, and educational risk intelligence across Mathematics and Portuguese cohorts.
+            Enterprise Data Engineering & MLOps Platform integrating automated ingestion, multi-stage validation, 
+            relational dimensional storage, MLflow-tracked risk prediction, FastAPI microservices, and drift monitoring.
         </div>
         <div class="badge-bar">
             <span class="hero-chip">📦 1,044 Raw Ingested</span>
@@ -331,6 +344,9 @@ def main():
             <span class="hero-chip">🏛️ 662 Unique Students</span>
             <span class="hero-chip">{db_status}</span>
             <span class="hero-chip">⚡ Airflow Orchestrated</span>
+            <span class="hero-chip">🤖 XGBoost Champion (v1.0.0)</span>
+            <span class="hero-chip">🚀 FastAPI Serving</span>
+            <span class="hero-chip">📊 MLflow Experiment Tracking</span>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -410,12 +426,14 @@ def main():
     # -------------------------------------------------------------------------
     # 3. Five Core Analytical Views (Tabs)
     # -------------------------------------------------------------------------
-    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+    tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
         "📊 1. Overall Performance",
         "🕒 2. Attendance vs Marks",
         "📚 3. Subject Comparison",
         "👥 4. Demographic Analysis",
-        "🔍 5. Student Risk Dossier"
+        "🔍 5. Student Risk Dossier",
+        "🎯 6. Academic Risk Prediction (ML)",
+        "📈 7. MLOps Monitoring & Drift",
     ])
 
     # =========================================================================
@@ -877,6 +895,388 @@ def main():
                 </ul>
             </div>
             """, unsafe_allow_html=True)
+
+    # =========================================================================
+    # VIEW 6: REAL-TIME RISK PREDICTION (ML INFERENCE)
+    # =========================================================================
+    with tab6:
+        st.markdown('<div class="section-title">🎯 Real-Time Academic Risk Prediction</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-subtitle">Predict student failure risk (G3 &lt; 10) at early semester checkpoints using trained MLOps champion model without outcome leakage.</div>', unsafe_allow_html=True)
+
+        pred_mode = st.radio(
+            "Prediction Mode",
+            ["Single Student Risk Assessment", "Batch Cohort Scoring"],
+            horizontal=True
+        )
+
+        if pred_mode == "Single Student Risk Assessment":
+            st.markdown("##### 📝 Configure Student Academic Profile")
+            st.caption("Input student features available prior to final evaluations (zero target leakage):")
+
+            p_col1, p_col2, p_col3 = st.columns(3)
+            with p_col1:
+                st.markdown("**Academic Checkpoints**")
+                in_g1 = st.slider("First Period Grade (G1)", min_value=0.0, max_value=20.0, value=11.0, step=0.5,
+                                  help="Period 1 grade on Portuguese secondary scale (0-20). Cutoff for pass is 10.")
+                in_absences = st.number_input("School Absences (Sessions)", min_value=0, max_value=93, value=4,
+                                              help="Recorded absences during academic term.")
+                in_failures = st.selectbox("Past Class Failures", options=[0, 1, 2, 3, 4], index=0,
+                                           help="Number of past academic course failures.")
+                in_attendance = round(100.0 * (1.0 - in_absences / 93.0), 2)
+                st.metric("Computed Attendance Rate", f"{in_attendance}%")
+
+            with p_col2:
+                st.markdown("**Study Habits & Demographics**")
+                in_studytime = st.selectbox(
+                    "Weekly Study Time Tier",
+                    options=[1, 2, 3, 4],
+                    format_func=lambda x: {1: "< 2 hours", 2: "2 to 5 hours", 3: "5 to 10 hours", 4: "> 10 hours"}[x],
+                    index=1
+                )
+                in_study_cat = {1: "<2 hours", 2: "2 to 5 hours", 3: "5 to 10 hours", 4: ">10 hours"}[in_studytime]
+                in_age = st.slider("Student Age", min_value=15, max_value=22, value=17)
+                in_subject = st.selectbox("Subject Course", options=["Mathematics", "Portuguese"], index=0)
+                in_school = st.selectbox("School Institution", options=["GP", "MS"],
+                                         format_func=lambda x: "GP — Gabriel Pereira" if x == "GP" else "MS — Mousinho da Silveira")
+                in_sex = st.selectbox("Gender", options=["F", "M"], format_func=lambda x: "Female (F)" if x == "F" else "Male (M)")
+
+            with p_col3:
+                st.markdown("**Family & Socio-Economic Context**")
+                in_address = st.selectbox("Residential Area", options=["U", "R"], format_func=lambda x: "Urban (U)" if x == "U" else "Rural (R)")
+                in_famsize = st.selectbox("Family Size", options=["GT3", "LE3"], format_func=lambda x: "More than 3 (>3)" if x == "GT3" else "Up to 3 (<=3)")
+                in_pstatus = st.selectbox("Parent Cohabitation", options=["T", "A"], format_func=lambda x: "Living Together (T)" if x == "T" else "Apart (A)")
+                in_parent_edu = st.selectbox("Max Parent Education", options=["Higher Education", "Secondary Education", "5th to 9th grade", "Primary (4th grade)", "None"], index=1)
+                in_mjob = st.selectbox("Mother's Occupation", options=["other", "services", "teacher", "at_home", "health"], index=0)
+                in_fjob = st.selectbox("Father's Occupation", options=["other", "services", "teacher", "at_home", "health"], index=0)
+
+            run_pred = st.button("🚀 Run Risk Prediction", type="primary", width='stretch')
+
+            if run_pred:
+                feature_payload = {
+                    "g1": float(in_g1),
+                    "age": int(in_age),
+                    "absences": int(in_absences),
+                    "attendance_rate": float(in_attendance),
+                    "studytime": int(in_studytime),
+                    "failures": int(in_failures),
+                    "school": in_school,
+                    "sex": in_sex,
+                    "address": in_address,
+                    "famsize": in_famsize,
+                    "pstatus": in_pstatus,
+                    "mjob": in_mjob,
+                    "fjob": in_fjob,
+                    "parent_education": in_parent_edu,
+                    "study_time_category": in_study_cat,
+                    "subject": in_subject,
+                }
+
+                pred_result = None
+                service_source = "FastAPI Service (http://localhost:8000)"
+                try:
+                    res = requests.post(f"{API_URL}/predict", json=feature_payload, timeout=3)
+                    if res.status_code == 200:
+                        pred_result = res.json()
+                    else:
+                        raise RuntimeError(f"HTTP {res.status_code}")
+                except Exception:
+                    try:
+                        ms = ModelService.get_instance()
+                        s_feat = StudentFeatures(**feature_payload)
+                        p_res = ms.predict_single(s_feat)
+                        pred_result = p_res.model_dump()
+                        service_source = "Local Model Engine (In-Memory Fallback)"
+                    except Exception as err:
+                        st.error(f"Inference failed: {err}")
+
+                if pred_result:
+                    is_at_risk = pred_result["prediction"] == 1
+                    risk_prob = pred_result["risk_score"]
+                    risk_tier = pred_result["risk_level"]
+                    recommendation = pred_result["recommendation"]
+                    model_name = pred_result.get("model_name", "XGBoost Classifier")
+                    model_ver = pred_result.get("model_version", "v1.0.0")
+
+                    st.markdown("---")
+                    st.markdown("### 📊 Prediction Intelligence & Early-Warning Output")
+
+                    out_col1, out_col2, out_col3 = st.columns([1.2, 1, 1.2])
+
+                    with out_col1:
+                        if is_at_risk:
+                            st.markdown(f"""
+                            <div style="background-color: #FEF2F2; border: 2px solid #EF4444; border-radius: 14px; padding: 20px; text-align: center;">
+                                <div style="font-size: 2.2rem;">🚨</div>
+                                <div style="font-size: 1.4rem; font-weight: 800; color: #991B1B; margin: 6px 0;">ACADEMIC AT-RISK ALERT</div>
+                                <div style="font-size: 0.95rem; color: #7F1D1D; font-weight: 600;">High probability of failing final evaluation (G3 &lt; 10)</div>
+                                <div style="margin-top: 12px; font-size: 0.82rem; background: #FEE2E2; padding: 4px 10px; border-radius: 9999px; display: inline-block; color: #991B1B; font-weight: 700;">
+                                    Tier: {risk_tier}
+                                </div>
+                            </div>
+                            """, unsafe_allow_html=True)
+                        else:
+                            st.markdown(f"""
+                            <div style="background-color: #F0FDF4; border: 2px solid #22C55E; border-radius: 14px; padding: 20px; text-align: center;">
+                                <div style="font-size: 2.2rem;">✅</div>
+                                <div style="font-size: 1.4rem; font-weight: 800; color: #166534; margin: 6px 0;">PASSING TRAJECTORY</div>
+                                <div style="font-size: 0.95rem; color: #14532D; font-weight: 600;">Student is on track to pass final evaluation (G3 &ge; 10)</div>
+                                <div style="margin-top: 12px; font-size: 0.82rem; background: #DCFCE7; padding: 4px 10px; border-radius: 9999px; display: inline-block; color: #166534; font-weight: 700;">
+                                    Tier: {risk_tier}
+                                </div>
+                            </div>
+                            """, unsafe_allow_html=True)
+
+                    with out_col2:
+                        gauge_fig = go.Figure(go.Indicator(
+                            mode="gauge+number",
+                            value=risk_prob * 100,
+                            number={'suffix': "%", 'valueformat': ".1f", 'font': {'size': 28, 'color': '#0F172A'}},
+                            title={'text': "<b>Failure Risk Score</b>", 'font': {'size': 13, 'color': '#475569'}},
+                            gauge={
+                                'axis': {'range': [0, 100], 'tickwidth': 1, 'tickcolor': "#CBD5E1"},
+                                'bar': {'color': "#EF4444" if is_at_risk else "#10B981"},
+                                'bgcolor': "white",
+                                'borderwidth': 1,
+                                'bordercolor': "#E2E8F0",
+                                'steps': [
+                                    {'range': [0, 35], 'color': '#DCFCE7'},
+                                    {'range': [35, 65], 'color': '#FEF3C7'},
+                                    {'range': [65, 100], 'color': '#FEE2E2'},
+                                ],
+                                'threshold': {
+                                    'line': {'color': "black", 'width': 3},
+                                    'thickness': 0.8,
+                                    'value': 50
+                                }
+                            }
+                        ))
+                        gauge_fig.update_layout(height=200, margin=dict(l=15, r=15, t=30, b=15))
+                        st.plotly_chart(gauge_fig, width='stretch')
+
+                    with out_col3:
+                        st.markdown(f"""
+                        <div class="kpi-card" style="height: 100%;">
+                            <div class="kpi-header"><span class="kpi-label">Model Lineage</span><span class="kpi-icon">🛡️</span></div>
+                            <div style="font-size: 1.1rem; font-weight: 700; color: #1E293B; margin-top: 4px;">{model_name}</div>
+                            <div style="font-size: 0.82rem; color: #64748B; margin-top: 4px;">Version: <b>{model_ver}</b></div>
+                            <div style="font-size: 0.82rem; color: #64748B; margin-top: 4px;">Serving Engine: <b>{service_source}</b></div>
+                            <div style="font-size: 0.82rem; color: #64748B; margin-top: 4px;">Target: <b>Academic Failure (G3 &lt; 10)</b></div>
+                        </div>
+                        """, unsafe_allow_html=True)
+
+                    st.markdown("##### 📋 Recommended Pedagogical Intervention")
+                    if is_at_risk:
+                        st.markdown(f"""
+                        <div class="callout-box-alert">
+                            <b>🚨 Action Plan:</b> {recommendation}
+                            <ul>
+                                <li><b>Academic Tutoring:</b> Schedule immediate 1-on-1 tutoring sessions in {in_subject}.</li>
+                                <li><b>Study Habit Restructuring:</b> Increase current study tier ({in_study_cat}) to at least 5-10 hours weekly.</li>
+                                <li><b>Attendance Monitoring:</b> Establish weekly absence checkpoints with academic counselors.</li>
+                            </ul>
+                        </div>
+                        """, unsafe_allow_html=True)
+                    else:
+                        st.markdown(f"""
+                        <div class="callout-box">
+                            <b>✅ Action Plan:</b> {recommendation}
+                            <ul>
+                                <li><b>Pacing:</b> Student maintains positive momentum with {in_g1} in Period 1.</li>
+                                <li><b>Mentorship:</b> Eligible for peer-tutoring circles to assist struggling cohort peers.</li>
+                            </ul>
+                        </div>
+                        """, unsafe_allow_html=True)
+
+        else:
+            st.markdown("##### 👥 Batch Cohort Scoring")
+            st.caption("Score all students in the currently filtered data mart cohort to identify high-risk populations:")
+
+            if st.button("⚡ Score Current Filtered Cohort", type="primary"):
+                scoring_subset = df_filtered.head(100).copy()
+                with st.spinner("Executing vectorized batch scoring via MLOps pipeline..."):
+                    records = []
+                    for _, row in scoring_subset.iterrows():
+                        records.append({
+                            "g1": float(row.get("g1", 10.0)),
+                            "age": int(row.get("age", 17)),
+                            "absences": int(row.get("absences", 0)),
+                            "attendance_rate": float(row.get("attendance_rate", 95.0)),
+                            "studytime": int(row.get("studytime", 2)),
+                            "failures": int(row.get("failures", 0)),
+                            "school": str(row.get("school", "GP")),
+                            "sex": str(row.get("sex", "F")),
+                            "address": str(row.get("address", "U")),
+                            "famsize": str(row.get("famsize", "GT3")),
+                            "pstatus": str(row.get("pstatus", "T")),
+                            "mjob": str(row.get("mjob", "other")),
+                            "fjob": str(row.get("fjob", "other")),
+                            "parent_education": str(row.get("parent_education", "Secondary Education")),
+                            "study_time_category": str(row.get("study_time_category", "2 to 5 hours")),
+                            "subject": str(row.get("subject", "Mathematics")),
+                        })
+
+                    batch_result = None
+                    try:
+                        res = requests.post(f"{API_URL}/predict/batch", json={"students": records}, timeout=5)
+                        if res.status_code == 200:
+                            batch_result = res.json()
+                    except Exception:
+                        try:
+                            ms = ModelService.get_instance()
+                            p_students = [StudentFeatures(**r) for r in records]
+                            b_res = ms.predict_batch(p_students)
+                            batch_result = b_res.model_dump()
+                        except Exception as e:
+                            st.error(f"Batch scoring error: {e}")
+
+                    if batch_result:
+                        total_s = batch_result["total_students"]
+                        at_risk_s = batch_result["at_risk_count"]
+                        pass_s = batch_result["passing_count"]
+                        mean_risk = batch_result["average_risk_score"]
+
+                        b_c1, b_c2, b_c3, b_c4 = st.columns(4)
+                        b_c1.metric("Scored Students", total_s)
+                        b_c2.metric("Predicted At-Risk", f"{at_risk_s} ({at_risk_s/total_s*100:.1f}%)")
+                        b_c3.metric("Predicted Passing", f"{pass_s} ({pass_s/total_s*100:.1f}%)")
+                        b_c4.metric("Mean Failure Risk", f"{mean_risk*100:.1f}%")
+
+                        preds = batch_result["predictions"]
+                        scoring_subset["Predicted_Status"] = [p["risk_status"] for p in preds]
+                        scoring_subset["Failure_Risk_Score"] = [f"{p['risk_score']*100:.1f}%" for p in preds]
+                        scoring_subset["Risk_Level"] = [p["risk_level"] for p in preds]
+
+                        st.dataframe(
+                            scoring_subset[["student_id", "subject", "g1", "absences", "Predicted_Status", "Failure_Risk_Score", "Risk_Level"]],
+                            width='stretch',
+                            hide_index=True
+                        )
+
+    # =========================================================================
+    # VIEW 7: MLOPS MONITORING & DRIFT DIAGNOSTICS
+    # =========================================================================
+    with tab7:
+        st.markdown('<div class="section-title">📈 MLOps Model Governance & Drift Diagnostics</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-subtitle">Real-time model lineage, experiment tracking comparison, artifact inspection, and Population Stability Index (PSI) feature drift detection.</div>', unsafe_allow_html=True)
+
+        reg_info = {}
+        if MODEL_REGISTRY_PATH.exists():
+            try:
+                with open(MODEL_REGISTRY_PATH, "r", encoding="utf-8") as f:
+                    reg_info = json.load(f)
+            except Exception:
+                reg_info = {}
+
+        st.markdown("##### 🏛️ Active Champion Model Specifications")
+        gov_col1, gov_col2, gov_col3, gov_col4 = st.columns(4)
+        gov_col1.metric("Champion Model", reg_info.get("champion_model_name", "XGBoost Classifier"))
+        gov_col2.metric("Model Version", reg_info.get("model_version", "v1.0.0"))
+        gov_col3.metric("Primary Metric", "Validation F1-Score")
+        gov_col4.metric("Tracking Backend", "MLflow (SQLite)")
+
+        val_m = reg_info.get("validation_metrics", {})
+        test_m = reg_info.get("test_metrics", {})
+
+        m_col1, m_col2, m_col3, m_col4, m_col5 = st.columns(5)
+        m_col1.metric("Validation F1", f"{val_m.get('f1', 0):.4f}", help="Primary selection metric")
+        m_col2.metric("Validation Recall", f"{val_m.get('recall', 0):.4f}", help="Coverage of at-risk students")
+        m_col3.metric("Validation ROC-AUC", f"{val_m.get('roc_auc', 0):.4f}")
+        m_col4.metric("Test F1 (Unbiased)", f"{test_m.get('f1', 0):.4f}")
+        m_col5.metric("Test Recall", f"{test_m.get('recall', 0):.4f}")
+
+        st.markdown("---")
+        st.markdown("##### 🏆 Model Candidate Benchmarking & MLflow Comparison")
+        st.caption("Empirical comparison across candidate algorithms trained on identical stratified splits:")
+
+        comparisons = reg_info.get("candidate_comparisons", [])
+        if comparisons:
+            comp_df = pd.DataFrame(comparisons)
+            comp_df = comp_df.rename(columns={
+                "model_name": "Candidate Algorithm",
+                "val_f1": "Val F1",
+                "val_recall": "Val Recall",
+                "val_precision": "Val Precision",
+                "val_roc_auc": "Val ROC-AUC",
+                "test_f1": "Test F1",
+                "test_recall": "Test Recall",
+                "test_roc_auc": "Test ROC-AUC",
+            })
+            st.dataframe(
+                comp_df[["Candidate Algorithm", "Val F1", "Val Recall", "Val Precision", "Val ROC-AUC", "Test F1", "Test Recall", "Test ROC-AUC"]],
+                width='stretch',
+                hide_index=True
+            )
+
+        st.markdown("---")
+        st.markdown("##### 📊 Champion Evaluation Artifacts")
+        st.caption("Visual inspection of Confusion Matrix, ROC Curve, and Precision-Recall Curve:")
+
+        art_col1, art_col2, art_col3 = st.columns(3)
+        cm_file = REPORTS_DIR / "cm_xgboost_classifier.png"
+        roc_file = REPORTS_DIR / "roc_xgboost_classifier.png"
+        pr_file = REPORTS_DIR / "pr_xgboost_classifier.png"
+
+        with art_col1:
+            if cm_file.exists():
+                st.image(str(cm_file), caption="Confusion Matrix (Test Split)", width='stretch')
+            else:
+                st.info("Confusion matrix artifact generating...")
+
+        with art_col2:
+            if roc_file.exists():
+                st.image(str(roc_file), caption="ROC Curve (AUC = 0.922)", width='stretch')
+            else:
+                st.info("ROC curve artifact generating...")
+
+        with art_col3:
+            if pr_file.exists():
+                st.image(str(pr_file), caption="Precision-Recall Curve (AP = 0.753)", width='stretch')
+            else:
+                st.info("PR curve artifact generating...")
+
+        st.markdown("---")
+        st.markdown("##### 🔍 Feature Drift Detection (Population Stability Index / PSI)")
+        st.caption(
+            "Detects statistical distribution shift by comparing incoming features to the reference training baseline. "
+            "Thresholds: PSI &lt; 0.1 (Stable), 0.1 &le; PSI &lt; 0.2 (Moderate Shift), PSI &ge; 0.2 (Retraining Alert)."
+        )
+
+        detector = DriftDetector()
+        drift_report = detector.evaluate_drift(df_filtered)
+
+        d_col1, d_col2, d_col3 = st.columns(3)
+        drift_status = drift_report.get("overall_drift_status", "Stable (No Drift)")
+        avg_psi = drift_report.get("average_psi", 0.0)
+        max_psi = drift_report.get("max_psi", 0.0)
+
+        d_col1.metric("Overall Drift Status", drift_status)
+        d_col2.metric("Average Feature PSI", f"{avg_psi:.4f}")
+        d_col3.metric("Maximum Feature PSI", f"{max_psi:.4f}")
+
+        feat_psi = drift_report.get("feature_psi", {})
+        if feat_psi:
+            psi_rows = []
+            for feat, pinfo in feat_psi.items():
+                psi_rows.append({
+                    "Feature": feat,
+                    "Type": pinfo["type"],
+                    "PSI Score": pinfo["psi"],
+                    "Status": pinfo["status"],
+                })
+            psi_df = pd.DataFrame(psi_rows).sort_values("PSI Score", ascending=False)
+            st.dataframe(psi_df, width='stretch', hide_index=True)
+
+        st.markdown("##### 🔄 Retraining Criteria & Policy")
+        st.markdown("""
+        <div class="callout-box">
+            <b>Documented Model Retraining Policy:</b>
+            <ul>
+                <li><b>Drift Trigger:</b> Any primary academic predictor (G1, Absences, Attendance) exhibiting <code>PSI &ge; 0.20</code> automatically triggers a retraining cycle.</li>
+                <li><b>Performance Degradation:</b> If rolling validation F1 degrades by &gt; 5% from champion baseline (0.7671), candidate retrain is initiated.</li>
+                <li><b>Promotion Protocol:</b> A Challenger model must outperform the Champion on Validation F1 by &ge; 0.005 and maintain Recall &ge; 0.70 to be promoted to production.</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
 
 
 if __name__ == "__main__":

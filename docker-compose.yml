@@ -36,12 +36,27 @@ services:
       - DB_NAME=student_db
       - DB_USER=postgres
       - DB_PASSWORD=postgres
+      - API_URL=http://api:8000
     depends_on:
       postgres:
         condition: service_healthy
     volumes:
       - ./data:/app/data
       - ./dashboard:/app/dashboard
+
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    container_name: student_prediction_api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - MLFLOW_TRACKING_URI=sqlite:///mlruns.db
+    volumes:
+      - ./models:/app/models
+      - ./data/reference:/app/data/reference
 
 volumes:
   pgdata:
