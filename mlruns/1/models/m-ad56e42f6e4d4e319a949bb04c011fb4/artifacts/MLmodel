@@ -1,0 +1,22 @@
+artifact_path: file:D:/anura/Documents/mlops_project/mlruns/1/models/m-ad56e42f6e4d4e319a949bb04c011fb4/artifacts
+flavors:
+  python_function:
+    data: model.ubj
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.12.6
+  xgboost:
+    code: null
+    data: model.ubj
+    model_class: xgboost.sklearn.XGBClassifier
+    model_format: ubj
+    xgb_version: 3.4.1
+mlflow_version: 3.17.1
+model_id: m-ad56e42f6e4d4e319a949bb04c011fb4
+model_size_bytes: 169555
+model_uuid: m-ad56e42f6e4d4e319a949bb04c011fb4
+prompts: null
+run_id: 32c2e0dcd8204c8fad0fda4e030f1484
+utc_time_created: '2026-10-14 14:12:57.760014'
