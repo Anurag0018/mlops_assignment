@@ -1,10 +1,35 @@
+# Data Engineering & Core Analytics (Part 1)
 pandas>=2.0.0
 numpy>=1.24.0
 sqlalchemy>=2.0.0
 psycopg2-binary>=2.9.0
-streamlit>=1.30.0
-plotly>=5.18.0
 python-dotenv>=1.0.0
-pytest>=8.0.0
 requests>=2.31.0
 statsmodels>=0.14.0
+
+# Visualization & Interactive Dashboard (Part 1 & 2)
+streamlit>=1.30.0
+plotly>=5.18.0
+matplotlib>=3.8.0
+
+# Machine Learning & Feature Engineering (Part 2)
+scikit-learn>=1.4.0
+xgboost>=2.0.0
+joblib>=1.3.0
+pyarrow>=15.0.0
+
+# MLOps & Experiment Tracking (Part 2)
+mlflow>=2.10.0
+
+# API Serving & Schemas (Part 2)
+fastapi>=0.110.0
+uvicorn[standard]>=0.28.0
+pydantic>=2.6.0
+httpx>=0.27.0
+
+# Automated Testing (Part 1 & 2)
+pytest>=8.0.0
+
+# Documentation & PDF Report Generation
+reportlab>=4.1.0
+markdown>=3.5.0
