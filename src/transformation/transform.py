@@ -91,14 +91,15 @@ def calculate_risk_status(row: pd.Series) -> str:
         return "Low Risk"
 
 
-def transform_staging_data(staging_path: Path) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+def transform_staging_data(staging_path: Path, output_dir: Optional[Path] = None) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     """
     Load staging data, engineer academic features, and split into relational tables:
     - students
     - academic_performance
     - student_analytics (mart)
     """
-    ensure_directories()
+    target_dir = output_dir or CLEANED_DIR
+    target_dir.mkdir(parents=True, exist_ok=True)
     
     if not staging_path.exists():
         raise FileNotFoundError(f"Staging file not found at {staging_path}. Run validation first.")
@@ -162,9 +163,9 @@ def transform_staging_data(staging_path: Path) -> Tuple[pd.DataFrame, pd.DataFra
     df_analytics = df[analytics_cols].copy()
 
     # 3. Save to Cleaned Layer
-    students_file = CLEANED_DIR / "students.csv"
-    academic_file = CLEANED_DIR / "academic_performance.csv"
-    analytics_file = CLEANED_DIR / "student_analytics.csv"
+    students_file = target_dir / "students.csv"
+    academic_file = target_dir / "academic_performance.csv"
+    analytics_file = target_dir / "student_analytics.csv"
 
     df_students.to_csv(students_file, index=False)
     df_academic.to_csv(academic_file, index=False)
